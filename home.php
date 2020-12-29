@@ -29,8 +29,10 @@ Template name: Home
 <section style="height:100vh;">
 	<div class="row">
 		<div class="col-md-9">
-			<p>slider</p>
-			<img src="http://www.kungfuhotpot.us/wp-content/uploads/2020/05/48.jpeg">
+
+			<?php
+			include('inc/slider.php');
+			?>
 		</div>
 		<div class=" col-md-3">
 			hohohohoo
@@ -40,6 +42,9 @@ Template name: Home
 	</div>
 </section>
 
+<div class="back-to-top" style="position:fixed; bottom:50px; right:50px">
+	<a href="#">TOP</a>
+</div>
 
 
 <?php get_footer(); ?>
