@@ -1,0 +1,151 @@
+/* ---------------------------------------------------
+    CONTENT STYLE
+----------------------------------------------------- */
+
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Mr+Dafoe&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Poppins:300,300i,400,400i,500,500i,600,600i,700');
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap');
+
+:root {
+    /* to assign these val, you can use e.g.) var(--blue) */
+    --green: #7cc68d;
+    --red:rgba(221,51,51,0.77);
+    --gray: #666;
+  }
+ 
+
+
+
+html{
+    scroll-behavior: smooth; /*for somooth scrolling*/
+}
+body {
+    font-family: 'Montserrat', sans-serif;
+
+  overflow-x: hidden;
+  padding-top: 50px;
+  color: #666;
+  /* position: relative; */
+ 
+}
+p:empty {	
+   display: none;	
+}
+
+
+h1{
+  font-weight: 700;
+  font-size: 60px;
+  
+}
+ul {
+    list-style-type: none;
+}
+
+li{
+	font-family: 'Source Sans Pro', sans-serif;
+}
+
+a{
+    font-family: 'Raleway',Helvetica,Arial,Lucida,sans-serif;
+    color: black;
+}
+
+a,
+a:hover,
+a:focus {
+  text-decoration: none;
+  transition: all 0.3s; 
+    color: initial;
+}
+
+
+  h1, h2, h3, h4, h5, h6{
+    font-family: 'Raleway',Helvetica,Arial,Lucida,sans-serif;
+    color: black;
+  }
+p{
+    line-height: 1.5em;
+    font-size:14px;
+}
+  
+.parallax {
+    /* Set a specific height in each scss file*/
+    height: 100vh;
+
+  
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+    /* for home */
+    /* z-index:-1; */
+  }
+  .centering{
+      /* set its parent container position: relative */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+
+  }
+ .vertical-middle{
+           /* set its parent container position: relative */
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+ } 
+
+ .custom-button{
+    border: 1px solid black;
+    
+}
+
+/* ---------------------------------------------------
+End of CONTENT STYLE
+----------------------------------------------------- */
+
+
+/*-----------------------------------------
+Header Style
+--------------------------------------------------------*/
+.site-header{
+-webkit-tap-highlight-color: transparent;
+font: 14px/1.7 "Source Sans Pro", sans-serif;
+font-size: 16px;
+color: #47425d;
+box-sizing: border-box;
+display: block;
+top: 0;
+left: 0;
+width: 100%;
+z-index: 1000;
+background-color: transparent;
+padding: 20px 0;
+transition: all 0.3s ease-out;
+position: fixed;
+}
+
+.sydney-hero-area{   
+-webkit-tap-highlight-color: transparent;
+font: 14px/1.7 "Source Sans Pro", sans-serif;
+font-size: 16px;
+color: #47425d;
+box-sizing: border-box;
+overflow: hidden;
+height: 385px;
+}
+
+
+/*-----------------------------------------
+End of Header Style
+--------------------------------------------------------*/
+
+/*-----------------------------------------
+Home Style
+--------------------------------------------------------*/
