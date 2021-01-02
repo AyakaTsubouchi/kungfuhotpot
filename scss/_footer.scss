@@ -1,0 +1,8 @@
+.photo-gallery .image{
+    
+    height: 100px;
+}
+.photo-gallery .image:hover{
+    transform: scale(2);
+    cursor: pointer;
+}
