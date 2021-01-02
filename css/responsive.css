@@ -28,11 +28,19 @@
     color: white!important;
 }
 .navbar-collapse {
-    /* background-color: rgba(34,34,34,0.76); */
     padding:20px;
     font-size:14px;
     font-family: 'Raleway',Helvetica,Arial,Lucida,sans-serif;
 }
+.nav-link {
+    padding-left: 20px!important;
+}
+.navbar-nav {
+    background-color: rgba(0,0,0,0.9)!important;
+    width: 200px!important;
+    position: absolute;
+    right: 50px;
+  }
 .navbar-collapse ul li{
     margin:10px;
 }
@@ -54,10 +62,7 @@
   .contact {
       height:100vh;
   }
-  .google-map iframe {
-
-    height: 300px;
-}
+ 
 
         
 }

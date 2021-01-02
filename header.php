@@ -15,15 +15,18 @@
 
 
    <header class="sticky header1 first-header">
+   <div class="container">
+      
+
+            <div class="logo" style="background-image:url( 'http://www.kungfuhotpot.us/wp-content/uploads/2020/05/14.jpeg')"></div>
+      <nav class="navbar navbar-expand-lg nav-toggler-right">
+         <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
 
 
-   <nav class="navbar navbar-expand-lg navbar-light nav-toggler-right">
-         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-
- 
             <i class="fas fa-bars"></i>
          </button>
-        <?php
+        
+         <?php
          wp_nav_menu(array(
             'theme_location'  => 'primary_menu',
             'depth'           => 1, // 1 = no dropdowns, 2 = with dropdowns.
@@ -34,8 +37,8 @@
             'fallback_cb'     => 'WP_Bootstrap_Navwalker::fallback',
             'walker'          => new WP_Bootstrap_Navwalker(),
          ));
-         ?> 
-      </nav> 
+         ?>
+      </nav>
 
-
+      </div>
    </header>

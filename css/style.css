@@ -26,7 +26,7 @@ body {
     font-family: 'Montserrat', sans-serif;
 
   overflow-x: hidden;
-  padding-top: 50px;
+  /* padding-top: 50px; */
   color: #666;
   /* position: relative; */
  
@@ -105,6 +105,10 @@ p{
     border: 1px solid black;
     
 }
+.sticky{
+  position: fixed;
+  z-index: 999;
+}
 
 /* ---------------------------------------------------
 End of CONTENT STYLE
@@ -114,31 +118,49 @@ End of CONTENT STYLE
 /*-----------------------------------------
 Header Style
 --------------------------------------------------------*/
-.site-header{
--webkit-tap-highlight-color: transparent;
-font: 14px/1.7 "Source Sans Pro", sans-serif;
-font-size: 16px;
-color: #47425d;
-box-sizing: border-box;
-display: block;
-top: 0;
-left: 0;
-width: 100%;
-z-index: 1000;
-background-color: transparent;
-padding: 20px 0;
-transition: all 0.3s ease-out;
-position: fixed;
+.header1{
+  height: 100px;
+  width: 100%;
+  background-color: rgba(0,0,0,0.9);
+  -moz-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+
+}
+.first-header {
+ 
+  height: 0px;
+  width: 100%;
+}
+.header1 .row{
+  width: 100%;
+}
+.logo {
+  /* height: 50px; */
+  height: 100px;
+  width: 120px;
+  background-size: cover;
+  background-position: center;
+  float: left;
+
+}
+.navbar {
+  padding-top: 25px;
+  justify-content:flex-end;
+}
+.navbar button{
+  color:white;
+}
+.navbar-nav li a{
+  color: white;
 }
 
-.sydney-hero-area{   
--webkit-tap-highlight-color: transparent;
-font: 14px/1.7 "Source Sans Pro", sans-serif;
-font-size: 16px;
-color: #47425d;
-box-sizing: border-box;
-overflow: hidden;
-height: 385px;
+.navbar-nav {
+  /* background-color: rgba(0,0,0,0.9); */
+}
+.nav-contents {
+  justify-content: flex-end;
 }
 
 
@@ -164,6 +186,21 @@ Contact Style
 
 /*-----------------------------------------
 end of Contact Style
+--------------------------------------------------------*/
+/*-----------------------------------------
+Footer Style
+--------------------------------------------------------*/
+.photo-gallery .image{
+    
+    height: 100px;
+}
+.photo-gallery .image:hover{
+    transform: scale(2);
+    cursor: pointer;
+}
+
+/*-----------------------------------------
+end of Footer Style
 --------------------------------------------------------*/
 
 
