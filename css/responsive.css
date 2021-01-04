@@ -2,10 +2,7 @@
 
 @media(max-width: 1199px){
     
-    .contact .lower-part .buttons .btn{
-        margin: 10px;
-       
-    }
+  
     
     
 }
@@ -17,7 +14,7 @@
         padding-bottom: 0px;
         background-color: rgba(34, 34, 34, 0.76);
     }
-    .first-header  .menu-item-17 a span,
+    /* .first-header  .menu-item-17 a span,
     .first-header .menu-item-10 a span,
     .first-header .menu-item-18 a span{
     color: white!important;
@@ -26,7 +23,7 @@
 .menu-item-10 a span,
 .menu-item-18 a span {
     color: white!important;
-}
+} */
 .navbar-collapse {
     padding:20px;
     font-size:14px;
@@ -68,15 +65,49 @@
 }
 
 @media(max-width: 940px){
-  .left-container .centering{
+  /* .left-container .centering{
         position:relative;
         
-    } 
+    }  */
+    
+    .text-slider .main-title{
+            font-size: 6vw!important;
+        }
+    .text-slider .subtitle{
+            font-size: 3vw!important;
+        }
+    
 
 }
 
 
-
+@media (max-width: 767px) {
+    .my-container{
+        max-width: 700px!important;
+    }
+    .text-container{
+        
+        margin-top: 50px;
+        text-align: center;
+       
+    }
+    .text-container .opening-hours table{
+        margin:0 auto;
+        text-align: left;
+    }
+    
+    
+    .site-footer .footer-title{
+        margin-top:20px;
+    }
+    .site-footer .opening-hours-title{
+        text-align: center;
+    }
+    .site-footer .opening-hours table{
+        margin:0 auto;
+    }
+   
+}
 
 
 @media (max-width: 690px) {
