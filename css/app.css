@@ -11005,6 +11005,10 @@ Slider
   height: 300px;
 }
 
+.hidden {
+  display: none;
+}
+
 /*--------------------------------------
 End of Slider
 -------------------------------------*/
@@ -11143,6 +11147,10 @@ Slider
 
 .carousel-item {
   height: 300px;
+}
+
+.hidden {
+  display: none;
 }
 
 /*--------------------------------------
@@ -11295,6 +11303,8 @@ End of Back To Top
 .slider .carousel-item {
   margin-top: 0.5rem;
   height: 400px;
+  background-size: cover;
+  background-position: center;
 }
 
 .slider .text-container .title {
@@ -11341,10 +11351,14 @@ End of Back To Top
 .slider .text-container .contact-card .opening-hours-title {
   margin-bottom: 0px;
   margin-top: 20px;
-  text-align: center;
   line-height: 1;
-  padding-bottom: 0;
+  padding-bottom: 5px;
   font-size: 16px;
+}
+
+.slider .text-container .contact-card .opening-hours th,
+.slider .text-container .contact-card .opening-hours td {
+  font-weight: 100;
 }
 
 .slider .text-container .contact-card .opening-hours .time {
@@ -11403,6 +11417,16 @@ End of Back To Top
 .site-footer .business-hours table td {
   padding-left: 10px;
   text-align: end;
+}
+
+.site-footer .copyright_txt {
+  color: #767676;
+  padding-top: 50px;
+  padding-bottom: 10px;
+}
+
+.site-footer a {
+  color: #767676;
 }
 
 body {

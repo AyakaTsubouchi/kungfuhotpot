@@ -51,7 +51,7 @@ Template name: Home
 				include('inc/slider.php');
 				?>
 			</div>
-			<div class="col-md-4 text-container">
+			<div class="col-md-5 text-container">
 				<h3 class="title">Contact Us</h3>
 				<address class="contact-card">
 					<div class="name" itemprop="name">
@@ -65,45 +65,42 @@ Template name: Home
 
 					<div class="phone">
 						<i class="fas fa-mobile-alt"></i>217-355-1888 </div>
+					<div class="opening-hours">
+						<p class="opening-hours-title"><i class="far fa-clock"></i>Opening Hours</p>
+						<table class="opening-hours">
+							<tbody>
+								<tr>
+									<th class="weekday-name weekday-monday">Monday</th>
+									<td class="time">11:00 am – 9:00 pm</td>
+								</tr>
+								<tr>
+									<th class="weekday-name weekday-monday">Tuesday</th>
+									<td class="time">11:00 am – 9:00 pm</td>
+								</tr>
+								<tr>
+									<th class="weekday-name weekday-monday">Wednesday</th>
+									<td class="time">11:00 am – 9:00 pm</td>
+								</tr>
+								<tr>
+									<th class="weekday-name weekday-monday">Thursday</th>
+									<td class="time">11:00 am – 9:00 pm</td>
+								</tr>
+								<tr>
+									<th class="weekday-name weekday-monday">Friday</th>
+									<td class="time">11:00 am – 9:00 pm</td>
+								</tr>
+								<tr>
+									<th class="weekday-name weekday-monday">Saturday</th>
+									<td class="time">11:00 am – 9:00 pm</td>
+								</tr>
+								<tr>
+									<th class="weekday-name weekday-monday">Sunday</th>
+									<td class="time">Closed</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
 
-					<p class="opening-hours-title"><i class="far fa-clock"></i>Opening Hours</p>
-					<table class="opening-hours">
-
-
-
-						<tbody>
-
-
-							<tr>
-								<th class="weekday-name weekday-monday">Monday</th>
-								<td class="time">11:00 am – 9:00 pm</td>
-							</tr>
-							<tr>
-								<th class="weekday-name weekday-monday">Tuesday</th>
-								<td class="time">11:00 am – 9:00 pm</td>
-							</tr>
-							<tr>
-								<th class="weekday-name weekday-monday">Wednesday</th>
-								<td class="time">11:00 am – 9:00 pm</td>
-							</tr>
-							<tr>
-								<th class="weekday-name weekday-monday">Thursday</th>
-								<td class="time">11:00 am – 9:00 pm</td>
-							</tr>
-							<tr>
-								<th class="weekday-name weekday-monday">Friday</th>
-								<td class="time">11:00 am – 9:00 pm</td>
-							</tr>
-							<tr>
-								<th class="weekday-name weekday-monday">Saturday</th>
-								<td class="time">11:00 am – 9:00 pm</td>
-							</tr>
-							<tr>
-								<th class="weekday-name weekday-monday">Sunday</th>
-								<td class="time">Closed</td>
-							</tr>
-						</tbody>
-					</table>
 				</address>
 
 			</div>
