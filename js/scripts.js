@@ -31,63 +31,35 @@ End of Header
 -------------------------------------*/
 
 /*--------------------------------------
-Home
+/*--------------------------------------
+back to TOP
 -----------------------------------------------------*/
 $(document).ready(function () {
   $(window).scroll(function () {
     var scrollPos = $(document).scrollTop(); // .scrollTop() ... current vertical position of the scroll bar  - if the element is not scrollable, this number will be 0.
     var top1 = $("header").offset().top ; // .offset() ... gives the top & left position of an object.
     var top2 = $(".home").offset().top + 500;
-    var top3 = $(".about").offset().top  ;
-    // var top4 = $(".about-img").offset().top +200;
-    var top4 = $(".about-img").offset().top + 500;
-    var top5 = $(".contact").offset().top;
-    // var top6 = $(".contact").offset().top + 1500;
-    var top6 =  $(".banner").offset().top;
-    // var top6 = $(".contact").offset().top + 1000 || $(".banner").offset().top ;
+    var top3 = $(".slider").offset().top  ;
+   
+    // var top4 = $(".about-img").offset().top + 500;
+    // var top5 = $(".contact").offset().top;
 
-    if (scrollPos >= top1 && scrollPos < top2 ) { //home
-      $(".indicator-1").addClass("selected");
-      $(".indicator-2").removeClass("selected");
-      $(".indicator-3").removeClass("selected");
-      $(".indicator-4").removeClass("selected");
-      $(".indicator-5").removeClass("selected");
-  
-      
-    } else if (scrollPos >= top2 && scrollPos < top3) { //about
-        $(".indicator-1").removeClass("selected");
-        $(".indicator-2").addClass("selected");
-        $(".indicator-3").removeClass("selected");
-        $(".indicator-4").removeClass("selected");
-        $(".indicator-5").removeClass("selected");
+    // var top6 =  $(".banner").offset().top;
  
-    } else if (scrollPos >= top3 && scrollPos < top4) { //about-image
-      $(".indicator-1").removeClass("selected");
-      $(".indicator-2").removeClass("selected");
-      $(".indicator-3").addClass("selected");
-      $(".indicator-4").removeClass("selected");
-      $(".indicator-5").removeClass("selected");
+
+  if (scrollPos < top2) { //slider
+        $(".back-to-top").removeClass("shown");
+       
+ 
+    } else if (scrollPos >= top2) { //about-image
+      $(".back-to-top").addClass("shown");
       
-    } else if (scrollPos >= top4 && scrollPos < top5) { //contact
-    // } else if (scrollPos >= top5 && scrollPos < top6) { //contact
-      $(".indicator-1").removeClass("selected");
-      $(".indicator-2").removeClass("selected");
-      $(".indicator-3").removeClass("selected");
-      $(".indicator-4").addClass("selected");
-      $(".indicator-5").removeClass("selected");
-    } else if (scrollPos >= top5 ) { //banner
-    // } else if (scrollPos >= top6) {  //banner
-      $(".indicator-1").removeClass("selected");
-      $(".indicator-2").removeClass("selected");
-      $(".indicator-3").removeClass("selected");
-      $(".indicator-4").removeClass("selected");
-      $(".indicator-5").addClass("selected");
-    }
+    } 
   });
 });
 
 
 
 /*--------------------------------------
-End of Home
+End of Back To Top
 -------------------------------------*/

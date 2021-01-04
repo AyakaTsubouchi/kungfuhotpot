@@ -1,4 +1,6 @@
-@import url(https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap);@import url(https://fonts.googleapis.com/css2?family=Mr+Dafoe&display=swap);@import url(https://fonts.googleapis.com/css?family=Poppins:300,300i,400,400i,500,500i,600,600i,700);@import url(https://fonts.googleapis.com/css2?family=Montserrat&display=swap);@import url(https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap);@charset "UTF-8";
+@import url(https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap);@import url(https://fonts.googleapis.com/css2?family=Mr+Dafoe&display=swap);@import url(https://fonts.googleapis.com/css?family=Poppins:300,300i,400,400i,500,500i,600,600i,700);@import url(https://fonts.googleapis.com/css2?family=Montserrat&display=swap);@import url(https://fonts.googleapis.com/css2?family=Raleway:wght@500;
+
+700&display=swap);@import url(https://fonts.googleapis.com/css2?family=Raleway:wght@500;700&display=swap);@charset "UTF-8";
 
 /*!
  * Bootstrap v4.5.3 (https://getbootstrap.com/)
@@ -6,7 +8,6 @@
  * Copyright 2011-2020 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
  */
-
 :root {
   --blue: #007bff;
   --indigo: #6610f2;
@@ -10957,7 +10958,6 @@ h6 {
 }
 
 p {
-  line-height: 1.5em;
   font-size: 14px;
 }
 
@@ -10996,6 +10996,53 @@ p {
   position: fixed;
   z-index: 999;
 }
+
+/*--------------------------------------
+Slider
+-------------------------------------*/
+
+.carousel-item {
+  height: 300px;
+}
+
+/*--------------------------------------
+End of Slider
+-------------------------------------*/
+
+/*--------------------------------------
+Back To Top
+-------------------------------------*/
+
+.shown {
+  display: block !important;
+}
+
+.back-to-top {
+  display: none;
+  position: fixed;
+  bottom: 50px;
+  right: 50px;
+  background-color: #FF0000;
+  border-radius: 5px;
+  z-index: 999;
+}
+
+.back-to-top i {
+  padding: 10px 15px;
+  color: white;
+}
+
+.back-to-top:hover {
+  background-color: white;
+}
+
+.back-to-top:hover i {
+  color: #FF0000;
+}
+
+/*--------------------------------------
+End of Back To Top
+-------------------------------------*/
 
 html {
   scroll-behavior: smooth;
@@ -11051,7 +11098,6 @@ h6 {
 }
 
 p {
-  line-height: 1.5em;
   font-size: 14px;
 }
 
@@ -11090,6 +11136,53 @@ p {
   position: fixed;
   z-index: 999;
 }
+
+/*--------------------------------------
+Slider
+-------------------------------------*/
+
+.carousel-item {
+  height: 300px;
+}
+
+/*--------------------------------------
+End of Slider
+-------------------------------------*/
+
+/*--------------------------------------
+Back To Top
+-------------------------------------*/
+
+.shown {
+  display: block !important;
+}
+
+.back-to-top {
+  display: none;
+  position: fixed;
+  bottom: 50px;
+  right: 50px;
+  background-color: #FF0000;
+  border-radius: 5px;
+  z-index: 999;
+}
+
+.back-to-top i {
+  padding: 10px 15px;
+  color: white;
+}
+
+.back-to-top:hover {
+  background-color: white;
+}
+
+.back-to-top:hover i {
+  color: #FF0000;
+}
+
+/*--------------------------------------
+End of Back To Top
+-------------------------------------*/
 
 .header1 {
   height: 100px;
@@ -11137,17 +11230,179 @@ p {
   justify-content: flex-end;
 }
 
-.carousel-item {
-  height: 300px;
+.top .slide-inner {
+  text-align: center;
 }
 
-.photo-gallery .image {
-  height: 100px;
+.top .slide-inner .text-slider {
+  width: 800px;
+  z-index: 10;
+  color: #fff;
+  margin: 0;
+  letter-spacing: 0px;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
 }
 
-.photo-gallery .image:hover {
-  transform: scale(2);
+.top .slide-inner .text-slider .main-title {
+  position: relative;
+  display: inline-block;
+  color: #fff;
+  font-size: 57px;
+  line-height: 67px;
+  font-weight: 700;
+  padding-bottom: 10px;
+  font-family: "Raleway", sans-serif;
+}
+
+.top .slide-inner .text-slider .subtitle {
+  font-size: 30px;
+  line-height: 40px;
+  padding: 20px 0 50px;
+  font-weight: 200;
+  font-family: "Raleway", sans-serif;
+}
+
+.top .slide-inner .slider-button {
+  color: #fff;
+  background-color: #FF0000;
+  position: relative;
+  display: inline-block;
+  font-family: "Raleway", sans-serif;
+  font-size: 13px;
+  line-height: 24px;
+  font-weight: 700;
+  padding: 12px 35px;
+  color: #fff;
+  text-transform: uppercase;
+  border-radius: 3px;
+  transition: all 0.3s;
+}
+
+.top .slide-inner .slider-button:hover {
+  color: #FF0000;
+  border: 1px solid #FF0000;
+  background-color: rgba(0, 0, 0, 0);
+}
+
+.my-container {
+  max-width: 980px !important;
+}
+
+.slider {
+  margin-top: 50px;
+}
+
+.slider .carousel-item {
+  margin-top: 0.5rem;
+  height: 400px;
+}
+
+.slider .text-container .title {
+  color: #767676;
+  font-size: 16px;
+  font-weight: 600;
+  padding-bottom: 24px;
+  margin: 0;
+  text-transform: uppercase;
+}
+
+.slider .text-container .contact-card {
+  font-family: "Raleway", Helvetica, Arial, Lucida, sans-serif;
+  color: #767676;
+  line-height: 1.4;
+}
+
+.slider .text-container .contact-card .name {
+  font-weight: bold;
+}
+
+.slider .text-container .contact-card .directions {
+  margin-left: 30px;
+  line-height: 2rem;
+}
+
+.slider .text-container .contact-card .directions a {
+  color: #767676;
+}
+
+.slider .text-container .contact-card .directions i {
+  margin-right: 5px;
+}
+
+.slider .text-container .contact-card .phone {
+  margin-left: 30px;
+  line-height: 2rem;
+}
+
+.slider .text-container .contact-card .phone i {
+  margin-right: 5px;
+}
+
+.slider .text-container .contact-card .opening-hours-title {
+  margin-bottom: 0px;
+  margin-top: 20px;
+  text-align: center;
+  line-height: 1;
+  padding-bottom: 0;
+  font-size: 16px;
+}
+
+.slider .text-container .contact-card .opening-hours .time {
+  padding-left: 20px;
+  text-align: end;
+}
+
+.site-footer {
+  margin-top: 50px;
+  padding-top: 30px;
+  background-color: #252525;
+}
+
+.site-footer h5 {
+  font-size: 16px;
+  color: #c5c5c5;
+}
+
+.site-footer .photo-gallery .image {
+  height: 80px;
+  transition: 0.5s;
+  margin: 5px;
+}
+
+.site-footer .photo-gallery .image:hover {
+  transform: scale(1.2);
   cursor: pointer;
+}
+
+.site-footer .location .google-map {
+  height: 200px;
+}
+
+.site-footer .location .address {
+  margin-top: 15px;
+}
+
+.site-footer .location .address p {
+  font-size: 12px;
+  line-height: 1px;
+}
+
+.site-footer .business-hours {
+  color: #767676;
+  font-size: 11px;
+}
+
+.site-footer .business-hours p {
+  padding-left: 45px;
+}
+
+.site-footer .business-hours table {
+  font-size: 13px;
+}
+
+.site-footer .business-hours table td {
+  padding-left: 10px;
+  text-align: end;
 }
 
 body {
