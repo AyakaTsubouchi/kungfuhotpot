@@ -10917,6 +10917,10 @@ body {
   /* position: relative; */
 }
 
+.overflow {
+  overflow-x: hidden;
+}
+
 p:empty {
   display: none;
 }
@@ -10995,6 +10999,10 @@ p {
 .sticky {
   position: fixed;
   z-index: 999;
+}
+
+i {
+  margin-right: 5px;
 }
 
 /*--------------------------------------
@@ -11061,6 +11069,10 @@ body {
   /* position: relative; */
 }
 
+.overflow {
+  overflow-x: hidden;
+}
+
 p:empty {
   display: none;
 }
@@ -11139,6 +11151,10 @@ p {
 .sticky {
   position: fixed;
   z-index: 999;
+}
+
+i {
+  margin-right: 5px;
 }
 
 /*--------------------------------------
@@ -11215,6 +11231,7 @@ End of Back To Top
   background-size: cover;
   background-position: center;
   float: left;
+  margin-left: 30px;
 }
 
 .navbar {
@@ -11335,17 +11352,9 @@ End of Back To Top
   color: #767676;
 }
 
-.slider .text-container .contact-card .directions i {
-  margin-right: 5px;
-}
-
 .slider .text-container .contact-card .phone {
   margin-left: 30px;
   line-height: 2rem;
-}
-
-.slider .text-container .contact-card .phone i {
-  margin-right: 5px;
 }
 
 .slider .text-container .contact-card .opening-hours-title {
@@ -11379,8 +11388,10 @@ End of Back To Top
 
 .site-footer .photo-gallery .image {
   height: 80px;
+  width: 80px;
   transition: 0.5s;
   margin: 5px;
+  background-size: cover;
 }
 
 .site-footer .photo-gallery .image:hover {
@@ -11389,7 +11400,7 @@ End of Back To Top
 }
 
 .site-footer .location .google-map {
-  height: 200px;
+  height: 250px;
 }
 
 .site-footer .location .address {

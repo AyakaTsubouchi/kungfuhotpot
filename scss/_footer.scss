@@ -11,8 +11,10 @@
 .photo-gallery {
     .image {
         height: 80px;
+        width: 80px;
         transition: 0.5s;
         margin: 5px;
+        background-size: cover;
     }
     .image:hover {
         transform: scale(1.2);
@@ -22,7 +24,7 @@
 
 .location{
     .google-map{
-        height: 200px;
+        height: 250px;
     }
     .address{
         margin-top: 15px;

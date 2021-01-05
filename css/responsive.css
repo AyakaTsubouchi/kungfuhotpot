@@ -7,25 +7,17 @@
     
 }
 @media(max-width: 991px){
-    
+
     .first-header {
         transition:none;
         padding-top: 0px;
         padding-bottom: 0px;
         background-color: rgba(34, 34, 34, 0.76);
     }
-    /* .first-header  .menu-item-17 a span,
-    .first-header .menu-item-10 a span,
-    .first-header .menu-item-18 a span{
-    color: white!important;
-}
-.menu-item-17 a span,
-.menu-item-10 a span,
-.menu-item-18 a span {
-    color: white!important;
-} */
+
 .navbar-collapse {
-    padding:20px;
+    margin-top: 20px;
+    margin-left: 150px;
     font-size:14px;
     font-family: 'Raleway',Helvetica,Arial,Lucida,sans-serif;
 }
@@ -34,9 +26,7 @@
 }
 .navbar-nav {
     background-color: rgba(0,0,0,0.9)!important;
-    width: 200px!important;
-    position: absolute;
-    right: 50px;
+
   }
 .navbar-collapse ul li{
     margin:10px;
@@ -65,16 +55,17 @@
 }
 
 @media(max-width: 940px){
-  /* .left-container .centering{
-        position:relative;
-        
-    }  */
-    
+
+    .text-slider {
+        width: 600px!important;
+    }
     .text-slider .main-title{
-            font-size: 6vw!important;
+            font-size: 5.5vw!important;
+            line-height:1!important;
         }
     .text-slider .subtitle{
             font-size: 3vw!important;
+            line-height:1!important;
         }
     
 
@@ -82,6 +73,18 @@
 
 
 @media (max-width: 767px) {
+    .header1 .row{
+        background-color: rgba(0,0,0,0.9);
+        margin: 0!important;
+    }
+    .logo-wrapper{
+        display: flex;
+        justify-content: center;
+    }
+    .navbar{
+        justify-content: center;
+    }
+     
     .my-container{
         max-width: 700px!important;
     }
@@ -106,7 +109,9 @@
     .site-footer .opening-hours table{
         margin:0 auto;
     }
-   
+    .site-footer .business-hours p{ 
+        padding-left: 0;   
+    }
 }
 
 
@@ -121,6 +126,18 @@
 }
 
 
+}
+
+@media (max-width: 512px) {
+
+    
+    
+    }
+
+@media (max-width:630px){
+    .text-slider {
+        width: 400px!important;
+    }
 }
 @media (max-width: 475px) {
 
@@ -141,7 +158,9 @@
 
 
 @media (max-width: 425px) {
-
+    .text-slider {
+        width: auto!important;
+    }
 .btn-wrapper{
     width: 260px;
 }
