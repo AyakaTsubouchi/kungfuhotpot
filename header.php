@@ -15,19 +15,23 @@
    <div class="overflow">
       <header class="sticky header1 first-header">
          <div class="row">
+            <!-- <div class="dark-background"> -->
+               
+            
             <div class="col-md-3 col-sm-12">
                <div class="logo-wrapper">
 
                   <div class="logo" style="background-image:url( 'http://www.kungfuhotpot.us/wp-content/uploads/2020/05/14.jpeg')"></div>
                </div>
             </div>
-            <div class="col-md-9 col-sm-12">
-               <nav class="navbar navbar-expand-lg nav-toggler-right">
+            <div class="col-md-9 col-sm-12 no-padding-on-mobile">
+               <nav class="navbar navbar-expand-lg nav-toggler-right no-padding-on-mobile">
                   <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
 
 
                      <i class="fas fa-bars"></i>
                   </button>
+                  <!-- </div> -->
 
                   <?php
                   wp_nav_menu(array(

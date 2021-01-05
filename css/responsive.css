@@ -84,6 +84,13 @@
     .navbar{
         justify-content: center;
     }
+    .navbar-collapse{
+        margin-top: 0px!important; 
+        margin-left: 0px!important;
+    }
+    .no-padding-on-mobile{
+        padding: 0px!important;
+    }
      
     .my-container{
         max-width: 700px!important;

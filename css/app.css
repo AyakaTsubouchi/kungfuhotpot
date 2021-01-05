@@ -11279,6 +11279,17 @@ End of Back To Top
   font-family: "Raleway", sans-serif;
 }
 
+.top .slide-inner .text-slider .main-title::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  width: 40%;
+  height: 1px;
+  margin-left: -20%;
+  background-color: #FF0000;
+}
+
 .top .slide-inner .text-slider .subtitle {
   font-size: 30px;
   line-height: 40px;
