@@ -9,7 +9,7 @@ $(document).ready(function () {
   
       if (scrollPos <100){
         $("header").addClass("first-header");
-        $("header").addText("first-header");
+
       } else {
    
         $("header").removeClass("first-header");
@@ -32,26 +32,17 @@ End of Header
 
 /*--------------------------------------
 /*--------------------------------------
-back to TOP
+HOME
 -----------------------------------------------------*/
 $(document).ready(function () {
   $(window).scroll(function () {
-    var scrollPos = $(document).scrollTop(); // .scrollTop() ... current vertical position of the scroll bar  - if the element is not scrollable, this number will be 0.
-    var top1 = $("header").offset().top ; // .offset() ... gives the top & left position of an object.
-    var top2 = $(".home").offset().top + 500;
-    var top3 = $(".slider").offset().top  ;
-   
-    // var top4 = $(".about-img").offset().top + 500;
-    // var top5 = $(".contact").offset().top;
-
-    // var top6 =  $(".banner").offset().top;
- 
-
-  if (scrollPos < top2) { //slider
+    var scrollPos = $(document).scrollTop(); 
+    
+  if (scrollPos < 200) { 
         $(".back-to-top").removeClass("shown");
        
  
-    } else if (scrollPos >= top2) { //about-image
+    } else if (scrollPos >= 200) {
       $(".back-to-top").addClass("shown");
       
     } 
@@ -61,5 +52,31 @@ $(document).ready(function () {
 
 
 /*--------------------------------------
-End of Back To Top
+End of HOME
+-------------------------------------*/
+
+
+/*--------------------------------------
+End of Modal
+-------------------------------------*/
+$('#exampleModal').on('shown.bs.modal', function () {
+  $('#myInput').trigger('focus')
+})
+
+
+
+  $('.get_button_more_info').on('click',function() {
+    var obj = $(this).val();
+    obj = JSON.parse(obj);
+ 
+    $("#exampleModal .modal-body img").attr("src",obj.img);
+    $("#exampleModal .modal-body #discription").text(obj.discription);
+   
+    // $("#exampleModal").modal();
+  });
+
+
+
+/*--------------------------------------
+End of Modal
 -------------------------------------*/

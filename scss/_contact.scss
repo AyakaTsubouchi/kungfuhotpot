@@ -1,0 +1,56 @@
+.contact-section {
+    margin-top: 50px;
+    .google-map {
+        margin-top: 0.5rem;
+        height: 400px;
+    }
+    .text-container {
+        .title {
+            color: #767676;
+            font-size: 16px;
+            font-weight: 600;
+            padding-bottom: 24px;
+            margin: 0;
+            text-transform: uppercase;
+        }
+        .contact-card {
+            font-family: "Raleway", Helvetica, Arial, Lucida, sans-serif;
+            color: #767676; 
+            line-height: 1.4;
+            .name {
+               
+                font-weight: bold;
+            }
+            .directions {
+               margin-left: 30px;
+               line-height: 2rem;
+                a {
+                    color: #767676;
+                }
+              
+            }
+            .phone{
+                margin-left: 30px;
+                line-height: 2rem;
+            
+            }
+            .opening-hours-title{
+                margin-bottom: 0px;
+                margin-top: 20px;
+                line-height: 1;
+                padding-bottom: 5px;
+                font-size: 16px;
+            }
+            .opening-hours{
+                th,td{
+                    font-weight: 100;
+                }
+                .time{
+                    padding-left: 20px;
+                    text-align: end;
+                    
+                }
+            }
+        }
+    }
+}

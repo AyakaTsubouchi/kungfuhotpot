@@ -9,17 +9,27 @@
 
 
 .photo-gallery {
-    .image {
-        height: 80px;
-        width: 80px;
-        transition: 0.5s;
-        margin: 5px;
-        background-size: cover;
-    }
-    .image:hover {
-        transform: scale(1.2);
+  
+    a:hover{
+        transform: scale(1.1);
         cursor: pointer;
     }
+
+    .square {
+        margin: 3px;
+         overflow: hidden;
+         width: 80px;
+         height: 80px;
+      }
+      img {
+         float: left;
+         width:  100%;
+         height: 100%;
+         object-fit: cover;
+        
+         border-radius: 8px;
+     }
+    
 }
 
 .location{

@@ -21,7 +21,7 @@
             <div class="col-md-3 col-sm-12">
                <div class="logo-wrapper">
 
-                  <div class="logo" style="background-image:url( 'http://www.kungfuhotpot.us/wp-content/uploads/2020/05/14.jpeg')"></div>
+                  <a class="logo" href="#" style="background-image:url( 'http://www.kungfuhotpot.us/wp-content/uploads/2020/05/14.jpeg')"></a>
                </div>
             </div>
             <div class="col-md-9 col-sm-12 no-padding-on-mobile">

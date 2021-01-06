@@ -5,25 +5,39 @@
          <div class="col-md-4  col-sm-12">
             <h5 class="footer-title">PHOTO GALLERY</h5>
             <div class="row photo-gallery">
-               <a href="#" class="col-lg-3 col-md-3 col-sm-2 col-xs-6 image" style="background-image:url('http://www.kungfuhotpot.us/wp-content/uploads/photo-gallery/thumb/51.png')">
-               </a>
-               <a href="#" class="col-lg-3 col-md-3 col-sm-2 col-xs-6 image" style="background-image:url('http://www.kungfuhotpot.us/wp-content/uploads/photo-gallery/thumb/51.png')">
-               </a>
-               <a href="#" class="col-lg-3 col-md-3 col-sm-2 col-xs-6 image" style="background-image:url('http://www.kungfuhotpot.us/wp-content/uploads/photo-gallery/thumb/51.png')">
-               </a>
-               <a href="#" class="col-lg-3 col-md-3 col-sm-2 col-xs-6 image" style="background-image:url('http://www.kungfuhotpot.us/wp-content/uploads/photo-gallery/thumb/51.png')">
-               </a>
-               <a href="#" class="col-lg-3 col-md-3 col-sm-2 col-xs-6 image" style="background-image:url('http://www.kungfuhotpot.us/wp-content/uploads/photo-gallery/thumb/51.png')">
-               </a>
-               <a href="#" class="col-lg-3 col-md-3 col-sm-2 col-xs-6 image" style="background-image:url('http://www.kungfuhotpot.us/wp-content/uploads/photo-gallery/thumb/51.png')">
-               </a>
-               <a href="#" class="col-lg-3 col-md-3 col-sm-2 col-xs-6 image" style="background-image:url('http://www.kungfuhotpot.us/wp-content/uploads/photo-gallery/thumb/51.png')">
-               </a>
-               <a href="#" class="col-lg-3 col-md-3 col-sm-2 col-xs-6 image" style="background-image:url('http://www.kungfuhotpot.us/wp-content/uploads/photo-gallery/thumb/51.png')">
-               </a>
-               <a href="#" class="col-lg-3 col-md-3 col-sm-2 col-xs-6 image" style="background-image:url('http://www.kungfuhotpot.us/wp-content/uploads/photo-gallery/thumb/51.png')">
-               </a>
-              
+
+               <?php
+               global $post;
+
+               $gallery_post = get_posts(array(
+                  'post_type' => 'gallery',
+                  'posts_per_page' => 100,
+                  // 'img' => ''
+
+               ));
+
+
+               // $obj=array(
+               //     'content' => $post->post_content,
+               //     'title' => esc_html( get_the_title() ),
+               //     'img' => esc_html(  get_the_post_thumbnail() ),
+               // );
+
+               if ($gallery_post) {
+                  foreach ($gallery_post as $post) :
+                     setup_postdata($post);
+
+               ?>
+
+                     <a href="#" class="flex-box get_button_more_info square" data-toggle="modal" data-target="#exampleModal" value='<?= json_encode($post) ?>'> <img src="<?php echo get_the_post_thumbnail_url(); ?>">
+                     </a>
+                 
+
+               <?php
+                  endforeach;
+                  wp_reset_postdata();
+               }
+               ?>
             </div>
          </div>
          <div class="col-md-4 col-sm-12 location">

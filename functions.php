@@ -157,12 +157,12 @@ function slider_section()
 {
 
   $slider_labels = array(
-    'name' => __('Slider', 'bonalife_site'),
-    'singular_name' => __('Slider', 'bonalife_site'),
-    'add_new' => __('Add new Slider', 'bonalife_site'),
-    'add_new_item' => __('Add new Slider', 'bonalife_site'),
-    'featured_image' => __('Slider Image', 'bonalife_site'),
-    'set_featured_image' => __('Set Slider Image', 'bonalife_site'),
+    'name' => __('Slider', 'kungfuhotpot_site'),
+    'singular_name' => __('Slider', 'kungfuhotpot_site'),
+    'add_new' => __('Add new Slider', 'kungfuhotpot_site'),
+    'add_new_item' => __('Add new Slider', 'kungfuhotpot_site'),
+    'featured_image' => __('Slider Image', 'kungfuhotpot_site'),
+    'set_featured_image' => __('Set Slider Image', 'kungfuhotpot_site'),
 
   );
 
@@ -200,12 +200,12 @@ function blog_post_type()
 {
 
   $blog_labels = array(
-    'name' => __('Blogs', 'bonalife_site'),
-    'singular_name' => __('Blog', 'bonalife_site'),
-    'add_new' => __('Add new blog', 'bonalife_site'),
-    'add_new_item' => __('Add new blog', 'bonalife_site'),
-    'featured_image' => __('blog post image', 'bonalife_site'),
-    'set_featured_image' => __('Set blog image', 'bonalife_site'),
+    'name' => __('Blogs', 'kungfuhotpot_site'),
+    'singular_name' => __('Blog', 'kungfuhotpot_site'),
+    'add_new' => __('Add new blog', 'kungfuhotpot_site'),
+    'add_new_item' => __('Add new blog', 'kungfuhotpot_site'),
+    'featured_image' => __('blog post image', 'kungfuhotpot_site'),
+    'set_featured_image' => __('Set blog image', 'kungfuhotpot_site'),
 
   );
 
@@ -233,26 +233,26 @@ add_action('init', 'blog_post_type');
 /*Added Blog Post in Wordpress*/
 
 
-/*Added Treatments Post in Wordpress*/
-function treatments_post_type()
+/*Added gallery Post in Wordpress*/
+function gallery_post_type()
 {
 
-  $treatments_labels = array(
-    'name' => __('Treatments', 'bonalife_site'),
-    'singular_name' => __('Treatments', 'bonalife_site'),
-    'add_new' => __('Add new Treatments', 'bonalife_site'),
-    'add_new_item' => __('Add new Treatments', 'bonalife_site'),
-    'featured_image' => __('Treatments post image', 'bonalife_site'),
-    'set_featured_image' => __('Set Treatments image', 'bonalife_site'),
+  $gallery_labels = array(
+    'name' => __('Gallery', 'kungfuhotpot_site'),
+    'singular_name' => __('Gallery', 'kungfuhotpot_site'),
+    'add_new' => __('Add new Gallery', 'kungfuhotpot_site'),
+    'add_new_item' => __('Add new Gallery', 'kungfuhotpot_site'),
+    'featured_image' => __('Gallery post image', 'kungfuhotpot_site'),
+    'set_featured_image' => __('Set Gallery image', 'kungfuhotpot_site'),
 
   );
 
-  $treatments_args = array(
+  $gallery_args = array(
 
-    'labels' =>  $treatments_labels,
+    'labels' =>  $gallery_labels,
     'public' => true,
     'show_ui' => true,
-    'rewrite' => array('slug' => 'treatments'),
+    'rewrite' => array('slug' => 'gallery'),
     'capability_type' => 'post',
     'menu_position' => null,
     'supports' => array(
@@ -263,138 +263,26 @@ function treatments_post_type()
 
   );
 
-  register_post_type('treatments', $treatments_args);
+  register_post_type('gallery', $gallery_args);
 }
 
-add_action('init', 'treatments_post_type');
+add_action('init', 'gallery_post_type');
 
-/*Added Treatments Post in Wordpress*/
-
-/*Added Team Post in Wordpress*/
-function team_post_type()
-{
-
-  $team_labels = array(
-    'name' => __('Team', 'bonalife_site'),
-    'singular_name' => __('Team', 'bonalife_site'),
-    'add_new' => __('Add new Team', 'bonalife_site'),
-    'add_new_item' => __('Add new Team', 'bonalife_site'),
-    'featured_image' => __('Team post image', 'bonalife_site'),
-    'set_featured_image' => __('Set Team image', 'bonalife_site'),
-
-  );
-
-  $team_args = array(
-
-    'labels' =>  $team_labels,
-    'public' => true,
-    'show_ui' => true,
-    'rewrite' => array('slug' => 'team'),
-    'capability_type' => 'post',
-    'menu_position' => null,
-    'supports' => array(
-      'title', 'editor', 'thumbnail', 'excerpt', 'author', 'permalinks',
-      'comments', 'revisions', 'custom-fields'
-    ),
-    'taxonomies'          => array('category', 'post_tag'),
-
-  );
-
-  register_post_type('team', $team_args);
-}
-
-add_action('init', 'team_post_type');
-
-/*Added TeamPost in Wordpress*/
-
-/*Added Patients feedback in Wordpress*/
-function feedback_post_type()
-{
-
-  $feedback_labels = array(
-    'name' => __('Feedback', 'bonalife_site'),
-    'singular_name' => __('Feedback', 'bonalife_site'),
-    'add_new' => __('Add new Feedback', 'bonalife_site'),
-    'add_new_item' => __('Add new Feedback', 'bonalife_site'),
-    'featured_image' => __('Feedback post image', 'bonalife_site'),
-    'set_featured_image' => __('Set Feedback image', 'bonalife_site'),
-
-  );
-
-  $feedback_args = array(
-
-    'labels' =>  $feedback_labels,
-    'public' => true,
-    'show_ui' => true,
-    'rewrite' => array('slug' => 'feedback'),
-    'capability_type' => 'post',
-    'menu_position' => null,
-    'supports' => array(
-      'title', 'editor', 'thumbnail', 'excerpt', 'author', 'permalinks',
-      'comments', 'revisions', 'custom-fields'
-    ),
-    'taxonomies'          => array('category', 'post_tag'),
-
-  );
-
-  register_post_type('feedback', $feedback_args);
-}
-
-add_action('init', 'feedback_post_type');
-
-/*Added Patients feedback in Wordpress*/
+/*Added gallery Post in Wordpress*/
 
 
-
-
-
-
-/*Added  About2 in Wordpress*/
-function about2_post_type()
-{
-
-  $about2_labels = array(
-    'name' => __('about2', 'bonalife_site'),
-    'singular_name' => __('about2', 'bonalife_site'),
-    'add_new' => __('Add new about2', 'bonalife_site'),
-    'add_new_item' => __('Add new about2', 'bonalife_site'),
-    'featured_image' => __('about2 post image', 'bonalife_site'),
-    'set_featured_image' => __('Set about2 image', 'bonalife_site'),
-
-  );
-
-  $about2_args = array(
-
-    'labels' =>  $about2_labels,
-    'public' => true,
-    'show_ui' => true,
-    'rewrite' => array('slug' => 'about2'),
-    'capability_type' => 'post',
-    'menu_position' => null,
-    'supports' => array(
-      'title', 'editor', 'thumbnail', 'excerpt', 'author', 'permalinks',
-      'comments', 'revisions', 'custom-fields'
-    ),
-    'taxonomies'          => array('category', 'post_tag'),
-
-  );
-
-  register_post_type('about2', $about2_args);
-}
-
-add_action('init', 'about2_post_type');
 
 /*Added  header info in Wordpress*/
 function header_post_type()
 {
 
   $header_labels = array(
-    'name' => __('header', 'bonalife_site'),
-    'singular_name' => __('header', 'bonalife_site'),
-    'add_new' => __('Add new header', 'bonalife_site'),
-    'add_new_item' => __('Add new header', 'bonalife_site'),
-    'featured_image' => __('header post image', 'bonalife_site'),
-    'set_featured_image' => __('Set header image', 'bonalife_site'),
+    'name' => __('header', 'kungfuhotpot_site'),
+    'singular_name' => __('header', 'kungfuhotpot_site'),
+    'add_new' => __('Add new header', 'kungfuhotpot_site'),
+    'add_new_item' => __('Add new header', 'kungfuhotpot_site'),
+    'featured_image' => __('header post image', 'kungfuhotpot_site'),
+    'set_featured_image' => __('Set header image', 'kungfuhotpot_site'),
 
   );
 
@@ -435,3 +323,6 @@ add_filter('excerpt_more', 'new_excerpt_more');
 
 //for easy appointment translate(loco translate)
 load_theme_textdomain('themify', TEMPLATEPATH . '/languages');
+
+
+//slider shortcode
