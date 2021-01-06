@@ -11,17 +11,9 @@
 
                $gallery_post = get_posts(array(
                   'post_type' => 'gallery',
-                  'posts_per_page' => 100,
-                  // 'img' => ''
+                  'posts_per_page' => 9,
 
                ));
-
-
-               // $obj=array(
-               //     'content' => $post->post_content,
-               //     'title' => esc_html( get_the_title() ),
-               //     'img' => esc_html(  get_the_post_thumbnail() ),
-               // );
 
                if ($gallery_post) {
                   foreach ($gallery_post as $post) :
@@ -53,12 +45,7 @@
             <div class="opening-hours">
                <p class="opening-hours-title"><i class="far fa-clock"></i>Opening Hours</p>
                <table class="opening-hours">
-
-
-
                   <tbody>
-
-
                      <tr>
                         <th class="weekday-name weekday-monday">Monday</th>
                         <td class="time">11:00 am – 9:00 pm</td>
@@ -92,11 +79,8 @@
             </div>
          </div>
       </div>
-      <!-- <?php wp_nav_menu(array('theme_location' => 'footer_menu1')); ?> -->
-
-
       <div class="copyright_txt">
-         <p></p>
+
          <p>© 2016-<?php
                      echo date("Y")
                      ?> All rights reserved, Powered by <a href="https://www.goopter.com/">Goopter</a></p>

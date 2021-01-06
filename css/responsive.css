@@ -83,6 +83,7 @@
     }
     .navbar{
         justify-content: center;
+        margin-top: 0px;
     }
     .navbar-collapse{
         margin-top: 0px!important; 
@@ -166,7 +167,7 @@
 
 @media (max-width: 425px) {
     .text-slider {
-        width: auto!important;
+        width: 360px!important;
     }
 .btn-wrapper{
     width: 260px;
@@ -194,4 +195,17 @@
   
 }
 
+}
+
+@media (max-width: 394px) {
+.img-wrapper{
+    width: 80%!important;
+    margin: 5px auto!important;
+}
+}
+@media (max-width: 321px) {
+
+.text-slider {
+    width: auto!important;
+}
 }
