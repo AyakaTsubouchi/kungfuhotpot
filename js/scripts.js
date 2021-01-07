@@ -2,11 +2,10 @@
 Header
 -----------------------------------------------------*/
 
-
+// add background color when scrolling some amount
 $(document).ready(function () {
   $(window).scroll(function () {
-      var scrollPos = $(document).scrollTop(); // .scrollTop() ... 
-  
+      var scrollPos = $(document).scrollTop(); 
       if (scrollPos <100){
         $("header").addClass("first-header");
 
@@ -18,11 +17,24 @@ $(document).ready(function () {
       
     });
 });
+
+//to close an open collapsed nav when clicking the element.
 $(document).ready(function () {
   $('.nav-link').click(function() {
     $('.navbar-collapse').collapse('hide');
   });
   
+});
+
+//to close an open collapsed nav when clicking outside of the nav elements.
+$(document).ready(function () {
+  $(document).click(function (event) {
+      var clickover = $(event.target);
+      var _opened = $("#navbarNavAltMarkup").hasClass("show");
+      if (_opened === true && !clickover.hasClass("navbar-toggler")) {
+          $(".navbar-toggler").click();
+      }
+  });
 });
 
 
@@ -34,6 +46,7 @@ End of Header
 /*--------------------------------------
 HOME
 -----------------------------------------------------*/
+// to show the button after scrolling
 $(document).ready(function () {
   $(window).scroll(function () {
     var scrollPos = $(document).scrollTop(); 
@@ -50,39 +63,13 @@ $(document).ready(function () {
 });
 
 
-
 /*--------------------------------------
 End of HOME
 -------------------------------------*/
 
 
 /*--------------------------------------
-End of Modal
--------------------------------------*/
-$('#exampleModal').on('shown.bs.modal', function () {
-  $('#myInput').trigger('focus')
-})
-
-
-
-  $('.get_button_more_info').on('click',function() {
-    var obj = $(this).val();
-    obj = JSON.parse(obj);
- 
-    $("#exampleModal .modal-body img").attr("src",obj.img);
-    $("#exampleModal .modal-body #discription").text(obj.discription);
-   
-    // $("#exampleModal").modal();
-  });
-
-
-
-/*--------------------------------------
-End of Modal
--------------------------------------*/
-
-/*--------------------------------------
-Test Modal
+ Modal
 -------------------------------------*/
 function switchStyle() {
   if (document.getElementById('styleSwitch').checked) {
@@ -94,5 +81,5 @@ function switchStyle() {
   }
 }
 /*--------------------------------------
-End of Test Modal
+End of  Modal
 -------------------------------------*/

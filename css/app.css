@@ -11527,6 +11527,10 @@ End of Modal
   color: #c5c5c5;
 }
 
+.site-footer .photo-gallery {
+  justify-content: center;
+}
+
 .site-footer .photo-gallery a:hover {
   transform: scale(1.1);
   cursor: pointer;

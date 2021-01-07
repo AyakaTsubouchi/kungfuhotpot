@@ -11,28 +11,22 @@
    <?php wp_head(); ?>
 </head>
 
-<body <?php body_class(); ?>>
+<body <?php body_class(); ?> >
    <div class="overflow">
-      <header class="sticky header1 first-header">
+      <header class="sticky header1 first-header" data-target="" aria-expanded="" aria-label="">
          <div class="row">
-            <!-- <div class="dark-background"> -->
-               
-            
+ 
             <div class="col-md-3 col-sm-12">
                <div class="logo-wrapper">
-
                   <a class="logo" href="#" style="background-image:url( 'http://www.kungfuhotpot.us/wp-content/uploads/2020/05/14.jpeg')"></a>
                </div>
             </div>
             <div class="col-md-9 col-sm-12 no-padding-on-mobile">
                <nav class="navbar navbar-expand-lg nav-toggler-right no-padding-on-mobile">
                   <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-
-
                      <i class="fas fa-bars"></i>
                   </button>
-                  <!-- </div> -->
-
+ 
                   <?php
                   wp_nav_menu(array(
                      'theme_location'  => 'primary_menu',
