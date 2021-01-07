@@ -6,7 +6,7 @@
     }
     .text-container {
         .title {
-            color: #767676;
+            color: $primary-font-color;
             font-size: 16px;
             font-weight: 600;
             padding-bottom: 24px;
@@ -15,7 +15,7 @@
         }
         .contact-card {
             font-family: "Raleway", Helvetica, Arial, Lucida, sans-serif;
-            color: #767676; 
+            color: $primary-font-color; 
             line-height: 1.4;
             .name {
                
@@ -25,7 +25,7 @@
                margin-left: 30px;
                line-height: 2rem;
                 a {
-                    color: #767676;
+                    color: $primary-font-color;
                 }
               
             }

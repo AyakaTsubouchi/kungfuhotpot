@@ -3,11 +3,8 @@ html {
 }
 body {
   font-family: "Montserrat", sans-serif;
-
   overflow-x: hidden;
-  /* padding-top: 50px; */
   color: #666;
-  /* position: relative; */
 }
 .overflow {
   overflow-x: hidden;
@@ -24,12 +21,8 @@ ul {
   list-style-type: none;
 }
 
-li {
-  font-family: "Source Sans Pro", sans-serif;
-}
-
 a {
-  font-family: "Raleway", Helvetica, Arial, Lucida, sans-serif;
+  font-family: $primary-font;
   color: black;
 }
 
@@ -47,7 +40,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: "Raleway", Helvetica, Arial, Lucida, sans-serif;
+  font-family: $primary-font;
   color: black;
 }
 p {
@@ -88,20 +81,7 @@ p {
 i {
   margin-right: 5px;
 }
-/*--------------------------------------
-Slider
--------------------------------------*/
-.carousel-item {
-  height: 300px;
-}
 
-.hidden {
-  display: none;
-}
-
-/*--------------------------------------
-End of Slider
--------------------------------------*/
 /*--------------------------------------
 Back To Top
 -------------------------------------*/
@@ -130,87 +110,4 @@ Back To Top
 }
 /*--------------------------------------
 End of Back To Top
--------------------------------------*/
-/*--------------------------------------
-Back To Top
--------------------------------------*/
-.shown {
-  display: block !important;
-}
-
-.back-to-top {
-  display: none;
-  position: fixed;
-  bottom: 50px;
-  right: 50px;
-  background-color: $color-red;
-  border-radius: 5px;
-  z-index: 999;
-  i {
-    padding: 10px 15px;
-    color: white;
-  }
-}
-.back-to-top:hover {
-  background-color: white;
-  i {
-    color: $color-red;
-  }
-}
-/*--------------------------------------
-End of Back To Top
--------------------------------------*/
-
-/*--------------------------------------
-Modal
--------------------------------------*/
-
-.gallery-modal{
-  color: white;
-  .modal-content{
-   background-color: rgba(0,0,0,0.9);
-  }
-  .modal-body{
-    text-align:center;
-    img{
-      
-      width: 70%;
-      object-fit: cover;
-    }
-    p{
-      margin-top: 10px;
-    }
-  }
-    .right{
-      position: absolute;
-    right: 5px;
-    top: 50%;
-    }
-    .left{
-      position: absolute;
-    left: 5px;
-    top: 50%;
-    }
-    .right:hover,
-    .left:hover{
-      cursor: pointer;
-    }
-  
-  .modal-header{
-    
-    border-bottom:none;
-  }
-  .modal-footer{
-    border-top:none
-  }
-  button{
-    span{
-      
-      color: white;
-    }
-  }
-  
-}
-/*--------------------------------------
-End of Modal
 -------------------------------------*/

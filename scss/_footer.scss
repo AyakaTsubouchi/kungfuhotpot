@@ -46,7 +46,7 @@
 }
 .business-hours{
     
-    color:#767676;
+    color:$primary-font-color;
     font-size: 11px;
     p{
         padding-left: 45px;
@@ -61,12 +61,12 @@
     }
 }
 .copyright_txt{
-    color: #767676;
+    color: $primary-font-color;
     padding-top: 50px;
     padding-bottom: 10px;
 }
 a{
-    color: #767676;
+    color: $primary-font-color;
 }
 }
 

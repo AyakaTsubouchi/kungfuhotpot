@@ -3,13 +3,12 @@
 @import 'font';
 @import 'color';
 @import 'shared';
-@import 'gallery';
 @import 'header';
+@import 'slider';
+@import 'modal';
+@import 'gallery';
 @import 'home';
 @import 'contact';
 @import 'footer';
+@import 'responsive';
 
-
-body {
- color: black;  
-}

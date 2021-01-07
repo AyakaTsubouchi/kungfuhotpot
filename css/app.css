@@ -1,4 +1,4 @@
-@import url(https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap);@import url(https://fonts.googleapis.com/css2?family=Mr+Dafoe&display=swap);@import url(https://fonts.googleapis.com/css?family=Poppins:300,300i,400,400i,500,500i,600,600i,700);@import url(https://fonts.googleapis.com/css2?family=Montserrat&display=swap);@import url(https://fonts.googleapis.com/css2?family=Raleway:wght@500;
+@import url(https://fonts.googleapis.com/css2?family=Montserrat&display=swap);@import url(https://fonts.googleapis.com/css2?family=Raleway:wght@500;
 
 700&display=swap);@import url(https://fonts.googleapis.com/css2?family=Raleway:wght@500;700&display=swap);@charset "UTF-8";
 
@@ -10912,9 +10912,7 @@ html {
 body {
   font-family: "Montserrat", sans-serif;
   overflow-x: hidden;
-  /* padding-top: 50px; */
   color: #666;
-  /* position: relative; */
 }
 
 .overflow {
@@ -10932,10 +10930,6 @@ h1 {
 
 ul {
   list-style-type: none;
-}
-
-li {
-  font-family: "Source Sans Pro", sans-serif;
 }
 
 a {
@@ -11004,6 +10998,223 @@ i {
 }
 
 /*--------------------------------------
+Back To Top
+-------------------------------------*/
+
+.shown {
+  display: block !important;
+}
+
+.back-to-top {
+  display: none;
+  position: fixed;
+  bottom: 50px;
+  right: 50px;
+  background-color: #FF0000;
+  border-radius: 5px;
+  z-index: 999;
+}
+
+.back-to-top i {
+  padding: 10px 15px;
+  color: white;
+}
+
+.back-to-top:hover {
+  background-color: white;
+}
+
+.back-to-top:hover i {
+  color: #FF0000;
+}
+
+/*--------------------------------------
+End of Back To Top
+-------------------------------------*/
+
+html {
+  scroll-behavior: smooth;
+  /*for somooth scrolling*/
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  overflow-x: hidden;
+  color: #666;
+}
+
+.overflow {
+  overflow-x: hidden;
+}
+
+p:empty {
+  display: none;
+}
+
+h1 {
+  font-weight: 700;
+  font-size: 60px;
+}
+
+ul {
+  list-style-type: none;
+}
+
+a {
+  font-family: "Raleway", Helvetica, Arial, Lucida, sans-serif;
+  color: black;
+}
+
+a,
+a:hover,
+a:focus {
+  text-decoration: none;
+  transition: all 0.3s;
+  color: initial;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Raleway", Helvetica, Arial, Lucida, sans-serif;
+  color: black;
+}
+
+p {
+  font-size: 14px;
+}
+
+.parallax {
+  /* Set a specific height in each scss file*/
+  height: 100vh;
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.centering {
+  /* set its parent container position: relative */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.vertical-middle {
+  /* set its parent container position: relative */
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.custom-button {
+  border: 1px solid black;
+}
+
+.sticky {
+  position: fixed;
+  z-index: 999;
+}
+
+i {
+  margin-right: 5px;
+}
+
+/*--------------------------------------
+Back To Top
+-------------------------------------*/
+
+.shown {
+  display: block !important;
+}
+
+.back-to-top {
+  display: none;
+  position: fixed;
+  bottom: 50px;
+  right: 50px;
+  background-color: #FF0000;
+  border-radius: 5px;
+  z-index: 999;
+}
+
+.back-to-top i {
+  padding: 10px 15px;
+  color: white;
+}
+
+.back-to-top:hover {
+  background-color: white;
+}
+
+.back-to-top:hover i {
+  color: #FF0000;
+}
+
+/*--------------------------------------
+End of Back To Top
+-------------------------------------*/
+
+.header1 {
+  height: 120px;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.9);
+  transition: all 0.3s;
+}
+
+.first-header {
+  height: 0px;
+  width: 100%;
+}
+
+.header1 .row {
+  width: 100%;
+}
+
+.logo {
+  height: 100px;
+  width: 120px;
+  background-size: cover;
+  background-position: center;
+  float: left;
+  margin-left: 30px;
+  margin-top: 10px;
+}
+
+.logo:hover {
+  cursor: pointer;
+}
+
+.navbar {
+  padding-top: 25px;
+  margin-top: 20px;
+  justify-content: flex-end;
+}
+
+.navbar button {
+  color: white;
+}
+
+.navbar-nav li a {
+  color: white;
+  text-transform: capitalize;
+  font-size: 14px;
+}
+
+.navbar-nav li a:hover {
+  color: #FF0000;
+}
+
+.nav-contents {
+  justify-content: flex-end;
+}
+
+/*--------------------------------------
 Slider
 -------------------------------------*/
 
@@ -11017,76 +11228,6 @@ Slider
 
 /*--------------------------------------
 End of Slider
--------------------------------------*/
-
-/*--------------------------------------
-Back To Top
--------------------------------------*/
-
-.shown {
-  display: block !important;
-}
-
-.back-to-top {
-  display: none;
-  position: fixed;
-  bottom: 50px;
-  right: 50px;
-  background-color: #FF0000;
-  border-radius: 5px;
-  z-index: 999;
-}
-
-.back-to-top i {
-  padding: 10px 15px;
-  color: white;
-}
-
-.back-to-top:hover {
-  background-color: white;
-}
-
-.back-to-top:hover i {
-  color: #FF0000;
-}
-
-/*--------------------------------------
-End of Back To Top
--------------------------------------*/
-
-/*--------------------------------------
-Back To Top
--------------------------------------*/
-
-.shown {
-  display: block !important;
-}
-
-.back-to-top {
-  display: none;
-  position: fixed;
-  bottom: 50px;
-  right: 50px;
-  background-color: #FF0000;
-  border-radius: 5px;
-  z-index: 999;
-}
-
-.back-to-top i {
-  padding: 10px 15px;
-  color: white;
-}
-
-.back-to-top:hover {
-  background-color: white;
-}
-
-.back-to-top:hover i {
-  color: #FF0000;
-}
-
-/*--------------------------------------
-End of Back To Top
 -------------------------------------*/
 
 /*--------------------------------------
@@ -11186,304 +11327,6 @@ End of Modal
   -o-object-fit: cover;
      object-fit: cover;
   border-radius: 35px;
-}
-
-html {
-  scroll-behavior: smooth;
-  /*for somooth scrolling*/
-}
-
-body {
-  font-family: "Montserrat", sans-serif;
-  overflow-x: hidden;
-  /* padding-top: 50px; */
-  color: #666;
-  /* position: relative; */
-}
-
-.overflow {
-  overflow-x: hidden;
-}
-
-p:empty {
-  display: none;
-}
-
-h1 {
-  font-weight: 700;
-  font-size: 60px;
-}
-
-ul {
-  list-style-type: none;
-}
-
-li {
-  font-family: "Source Sans Pro", sans-serif;
-}
-
-a {
-  font-family: "Raleway", Helvetica, Arial, Lucida, sans-serif;
-  color: black;
-}
-
-a,
-a:hover,
-a:focus {
-  text-decoration: none;
-  transition: all 0.3s;
-  color: initial;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-family: "Raleway", Helvetica, Arial, Lucida, sans-serif;
-  color: black;
-}
-
-p {
-  font-size: 14px;
-}
-
-.parallax {
-  /* Set a specific height in each scss file*/
-  height: 100vh;
-  /* Create the parallax scrolling effect */
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
-.centering {
-  /* set its parent container position: relative */
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-
-.vertical-middle {
-  /* set its parent container position: relative */
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-}
-
-.custom-button {
-  border: 1px solid black;
-}
-
-.sticky {
-  position: fixed;
-  z-index: 999;
-}
-
-i {
-  margin-right: 5px;
-}
-
-/*--------------------------------------
-Slider
--------------------------------------*/
-
-.carousel-item {
-  height: 300px;
-}
-
-.hidden {
-  display: none;
-}
-
-/*--------------------------------------
-End of Slider
--------------------------------------*/
-
-/*--------------------------------------
-Back To Top
--------------------------------------*/
-
-.shown {
-  display: block !important;
-}
-
-.back-to-top {
-  display: none;
-  position: fixed;
-  bottom: 50px;
-  right: 50px;
-  background-color: #FF0000;
-  border-radius: 5px;
-  z-index: 999;
-}
-
-.back-to-top i {
-  padding: 10px 15px;
-  color: white;
-}
-
-.back-to-top:hover {
-  background-color: white;
-}
-
-.back-to-top:hover i {
-  color: #FF0000;
-}
-
-/*--------------------------------------
-End of Back To Top
--------------------------------------*/
-
-/*--------------------------------------
-Back To Top
--------------------------------------*/
-
-.shown {
-  display: block !important;
-}
-
-.back-to-top {
-  display: none;
-  position: fixed;
-  bottom: 50px;
-  right: 50px;
-  background-color: #FF0000;
-  border-radius: 5px;
-  z-index: 999;
-}
-
-.back-to-top i {
-  padding: 10px 15px;
-  color: white;
-}
-
-.back-to-top:hover {
-  background-color: white;
-}
-
-.back-to-top:hover i {
-  color: #FF0000;
-}
-
-/*--------------------------------------
-End of Back To Top
--------------------------------------*/
-
-/*--------------------------------------
-Modal
--------------------------------------*/
-
-.gallery-modal {
-  color: white;
-}
-
-.gallery-modal .modal-content {
-  background-color: rgba(0, 0, 0, 0.9);
-}
-
-.gallery-modal .modal-body {
-  text-align: center;
-}
-
-.gallery-modal .modal-body img {
-  width: 70%;
-  -o-object-fit: cover;
-     object-fit: cover;
-}
-
-.gallery-modal .modal-body p {
-  margin-top: 10px;
-}
-
-.gallery-modal .right {
-  position: absolute;
-  right: 5px;
-  top: 50%;
-}
-
-.gallery-modal .left {
-  position: absolute;
-  left: 5px;
-  top: 50%;
-}
-
-.gallery-modal .right:hover,
-.gallery-modal .left:hover {
-  cursor: pointer;
-}
-
-.gallery-modal .modal-header {
-  border-bottom: none;
-}
-
-.gallery-modal .modal-footer {
-  border-top: none;
-}
-
-.gallery-modal button span {
-  color: white;
-}
-
-/*--------------------------------------
-End of Modal
--------------------------------------*/
-
-.header1 {
-  height: 120px;
-  width: 100%;
-  background-color: rgba(0, 0, 0, 0.9);
-  transition: all 0.3s;
-}
-
-.first-header {
-  height: 0px;
-  width: 100%;
-}
-
-.header1 .row {
-  width: 100%;
-}
-
-.logo {
-  height: 100px;
-  width: 120px;
-  background-size: cover;
-  background-position: center;
-  float: left;
-  margin-left: 30px;
-  margin-top: 10px;
-}
-
-.logo:hover {
-  cursor: pointer;
-}
-
-.navbar {
-  padding-top: 25px;
-  margin-top: 20px;
-  justify-content: flex-end;
-}
-
-.navbar button {
-  color: white;
-}
-
-.navbar-nav li a {
-  color: white;
-  text-transform: capitalize;
-  font-size: 14px;
-}
-
-.navbar-nav li a:hover {
-  color: #FF0000;
-}
-
-.nav-contents {
-  justify-content: flex-end;
 }
 
 .top .slide-inner {
@@ -11746,7 +11589,196 @@ End of Modal
   color: #767676;
 }
 
-body {
-  color: black;
+@media (max-width: 991px) {
+  .first-header {
+    transition: none;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    background-color: rgba(34, 34, 34, 0.76);
+  }
+
+  .navbar-collapse {
+    margin-top: 20px;
+    margin-left: 150px;
+    font-size: 14px;
+    font-family: "Raleway", Helvetica, Arial, Lucida, sans-serif;
+  }
+
+  .nav-link {
+    padding-left: 20px !important;
+  }
+
+  .navbar-nav {
+    background-color: rgba(0, 0, 0, 0.9) !important;
+  }
+
+  .navbar-collapse ul li {
+    margin: 10px;
+  }
+
+  .about .container {
+    height: 1500px;
+  }
+
+  .home .title h1 {
+    font-size: 50px;
+  }
+
+  .home .title h5 {
+    font-size: 20px;
+  }
+
+  .less-margin-on-tab {
+    margin-top: 20%;
+  }
+
+  .contact {
+    height: 100vh;
+  }
+}
+
+@media (max-width: 940px) {
+  .text-slider {
+    width: 600px !important;
+  }
+
+  .text-slider .main-title {
+    font-size: 5.5vw !important;
+    line-height: 1 !important;
+  }
+
+  .text-slider .subtitle {
+    font-size: 3vw !important;
+    line-height: 1 !important;
+  }
+}
+
+@media (max-width: 767px) {
+  .header1 .row {
+    background-color: rgba(0, 0, 0, 0.9);
+    margin: 0 !important;
+  }
+
+  .logo-wrapper {
+    display: flex;
+    justify-content: center;
+  }
+
+  .navbar {
+    justify-content: center;
+    margin-top: 0px;
+  }
+
+  .navbar-collapse {
+    margin-top: 0px !important;
+    margin-left: 0px !important;
+  }
+
+  .no-padding-on-mobile {
+    padding: 0px !important;
+  }
+
+  .my-container {
+    max-width: 700px !important;
+  }
+
+  .text-container {
+    margin-top: 50px;
+    text-align: center;
+  }
+
+  .text-container .opening-hours table {
+    margin: 0 auto;
+    text-align: left;
+  }
+
+  .site-footer .footer-title {
+    margin-top: 20px;
+  }
+
+  .site-footer .opening-hours-title {
+    text-align: center;
+  }
+
+  .site-footer .opening-hours table {
+    margin: 0 auto;
+  }
+
+  .site-footer .business-hours p {
+    padding-left: 0;
+  }
+}
+
+@media (max-width: 690px) {
+  .btn-wrapper {
+    width: 300px;
+  }
+
+  .contact .lower-part .buttons {
+    display: block;
+  }
+}
+
+@media (max-width: 630px) {
+  .text-slider {
+    width: 400px !important;
+  }
+}
+
+@media (max-width: 475px) {
+  .banner {
+    height: 100vh;
+  }
+
+  .parallax {
+    /* Set a specific height in each scss file*/
+    /* remove the parallax scrolling effect */
+    background-attachment: inherit;
+  }
+}
+
+@media (max-width: 425px) {
+  .text-slider {
+    width: 360px !important;
+  }
+
+  .btn-wrapper {
+    width: 260px;
+  }
+
+  .home-btn {
+    width: 100%;
+    display: flex;
+  }
+
+  .home-btn br,
+  .home-btn p {
+    display: inline;
+  }
+
+  .home-btn:hover .shown-by-hover {
+    line-height: 90px;
+  }
+
+  .contact {
+    height: 80vh;
+  }
+
+  .google-map iframe {
+    height: 100%;
+  }
+}
+
+@media (max-width: 394px) {
+  .img-wrapper {
+    width: 80% !important;
+    margin: 5px auto !important;
+  }
+}
+
+@media (max-width: 321px) {
+  .text-slider {
+    width: auto !important;
+  }
 }
 

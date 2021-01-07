@@ -1,0 +1,54 @@
+
+/*--------------------------------------
+Modal
+-------------------------------------*/
+
+.gallery-modal{
+    color: white;
+    .modal-content{
+     background-color: $background-color-dark;
+    }
+    .modal-body{
+      text-align:center;
+      img{
+        
+        width: 70%;
+        object-fit: cover;
+      }
+      p{
+        margin-top: 10px;
+      }
+    }
+      .right{
+        position: absolute;
+      right: 5px;
+      top: 50%;
+      }
+      .left{
+        position: absolute;
+      left: 5px;
+      top: 50%;
+      }
+      .right:hover,
+      .left:hover{
+        cursor: pointer;
+      }
+    
+    .modal-header{
+      
+      border-bottom:none;
+    }
+    .modal-footer{
+      border-top:none
+    }
+    button{
+      span{
+        
+        color: white;
+      }
+    }
+    
+  }
+  /*--------------------------------------
+  End of Modal
+  -------------------------------------*/
