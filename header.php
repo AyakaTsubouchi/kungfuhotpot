@@ -13,12 +13,13 @@
 
 <body <?php body_class(); ?> >
    <div class="overflow">
-      <header class="sticky header1 first-header" data-target="" aria-expanded="" aria-label="">
+      <header class="sticky header1 first-header">
          <div class="row">
  
             <div class="col-md-3 col-sm-12">
                <div class="logo-wrapper">
-                  <a class="logo" href="#" style="background-image:url( 'http://www.kungfuhotpot.us/wp-content/uploads/2020/05/14.jpeg')"></a>
+                  <!-- TODO change the link -->
+                  <a class="logo" href="http://localhost:8888/" style="background-image:url( 'http://www.kungfuhotpot.us/wp-content/uploads/2020/05/14.jpeg')"></a>
                </div>
             </div>
             <div class="col-md-9 col-sm-12 no-padding-on-mobile">

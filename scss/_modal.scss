@@ -5,14 +5,34 @@ Modal
 
 .gallery-modal{
     color: white;
+    .modal-dialog{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-70%,-50%)!important;
+    }
     .modal-content{
      background-color: $background-color-dark;
+     width: 700px;
     }
     .modal-body{
       text-align:center;
+      .carousel-inner{
+        margin: 0 auto;
+      }
+      .carousel-control-next{
+          margin-right: -35px;
+      }
+      .carousel-control-prev{
+          margin-left: -35px;
+      }
+      .carousel-item{
+          height: auto;
+          padding: 50px;;
+      }
       img{
         
-        width: 70%;
+        width: 100%;
         object-fit: cover;
       }
       p{

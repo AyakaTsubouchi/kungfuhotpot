@@ -32,7 +32,7 @@ Template name: Home
 				Come and try our delicious cuisines! You won't regret it!
 			</p>
 		</div>
-		<a href="#" class="btn slider-button">
+		<a href="#" class="btn slider-button" target="_blank">
 			ONLINE ORDER!
 		</a>
 
@@ -45,13 +45,13 @@ Template name: Home
 
 
 		<div class="row">
-			<div class="col-md-7">
+			<div class="col-md-8">
 
 				<?php
 				include('inc/slider.php');
 				?>
 			</div>
-			<div class="col-md-5 text-container">
+			<div class="col-md-4 text-container">
 				<h3 class="title">Contact Us</h3>
 				<address class="contact-card">
 					<div class="name" itemprop="name">

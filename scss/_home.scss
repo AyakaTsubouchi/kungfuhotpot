@@ -1,7 +1,10 @@
 .top {
     .slide-inner {
         text-align: center;
-
+        
+.slide-in{
+    transform:translate(0,0)!important;
+}
         .text-slider {
             width: 800px;
             z-index: 10;
@@ -9,17 +12,19 @@
             margin: 0;
             letter-spacing: 0px;
             text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+            transform: translate(-100%,0);
+            transition: 0.5s;
 
             .main-title {
                 position: relative;
                 display: inline-block;
                 color: #fff;
                 font-size: 57px;
-        
                 line-height: 67px;
                 font-weight: 700;
                 padding-bottom: 10px;
                 font-family: "Raleway", sans-serif;
+                
             }
             .main-title::after {
                 content: "";
@@ -32,8 +37,7 @@
                 background-color: $color-red;
             }
             .subtitle {
-                font-size: 30px;
-          
+                font-size: 30px;     
                 line-height: 40px;
                 padding: 20px 0 50px;
                 font-weight: 200;
@@ -77,11 +81,10 @@
 .slider {
     margin-top: 50px;
     .carousel-item {
-        margin-top: 0.5rem;
-        height: 400px;
+        // margin-top: 0.5rem;
+        height: 500px;
         background-size: cover;
         background-position: center;
-        // max-width: 630px;
     }
     .text-container {
         .title {

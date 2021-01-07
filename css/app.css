@@ -11238,16 +11238,41 @@ Modal
   color: white;
 }
 
+.gallery-modal .modal-dialog {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-70%, -50%) !important;
+}
+
 .gallery-modal .modal-content {
   background-color: rgba(0, 0, 0, 0.9);
+  width: 700px;
 }
 
 .gallery-modal .modal-body {
   text-align: center;
 }
 
+.gallery-modal .modal-body .carousel-inner {
+  margin: 0 auto;
+}
+
+.gallery-modal .modal-body .carousel-control-next {
+  margin-right: -35px;
+}
+
+.gallery-modal .modal-body .carousel-control-prev {
+  margin-left: -35px;
+}
+
+.gallery-modal .modal-body .carousel-item {
+  height: auto;
+  padding: 50px;
+}
+
 .gallery-modal .modal-body img {
-  width: 70%;
+  width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
 }
@@ -11333,6 +11358,10 @@ End of Modal
   text-align: center;
 }
 
+.top .slide-inner .slide-in {
+  transform: translate(0, 0) !important;
+}
+
 .top .slide-inner .text-slider {
   width: 800px;
   z-index: 10;
@@ -11340,6 +11369,8 @@ End of Modal
   margin: 0;
   letter-spacing: 0px;
   text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+  transform: translate(-100%, 0);
+  transition: 0.5s;
 }
 
 .top .slide-inner .text-slider .main-title {
@@ -11399,8 +11430,7 @@ End of Modal
 }
 
 .slider .carousel-item {
-  margin-top: 0.5rem;
-  height: 400px;
+  height: 500px;
   background-size: cover;
   background-position: center;
 }
@@ -11621,16 +11651,12 @@ End of Modal
     margin: 10px;
   }
 
-  .about .container {
-    height: 1500px;
+  .slider .opening-hours tbody {
+    font-size: 13.7px;
   }
 
-  .home .title h1 {
-    font-size: 50px;
-  }
-
-  .home .title h5 {
-    font-size: 20px;
+  .slider .opening-hours td {
+    padding-left: 5px !important;
   }
 
   .less-margin-on-tab {
@@ -11639,6 +11665,14 @@ End of Modal
 
   .contact {
     height: 100vh;
+  }
+
+  .gallery-modal .modal-dialog {
+    transform: translate(-70%, -50%) !important;
+  }
+
+  .gallery-modal .modal-content {
+    width: 700px;
   }
 }
 
@@ -11689,12 +11723,34 @@ End of Modal
 
   .text-container {
     margin-top: 50px;
-    text-align: center;
   }
 
-  .text-container .opening-hours table {
-    margin: 0 auto;
+  .opening-hours p {
+    margin-left: 100px;
+  }
+
+  .opening-hours table {
     text-align: left;
+  }
+
+  .opening-hours tbody {
+    font-size: 14px;
+  }
+
+  .opening-hours th {
+    width: 150px;
+  }
+
+  .slider .opening-hours td {
+    padding-left: 20px !important;
+  }
+
+  .gallery-modal .modal-dialog {
+    transform: translate(-50%, -50%) !important;
+  }
+
+  .gallery-modal .modal-content {
+    width: 500px;
   }
 
   .site-footer .footer-title {
@@ -11703,14 +11759,12 @@ End of Modal
 
   .site-footer .opening-hours-title {
     text-align: center;
+    margin-left: 0;
+    padding-left: 0 !important;
   }
 
-  .site-footer .opening-hours table {
+  .site-footer table {
     margin: 0 auto;
-  }
-
-  .site-footer .business-hours p {
-    padding-left: 0;
   }
 }
 
@@ -11721,6 +11775,33 @@ End of Modal
 
   .contact .lower-part .buttons {
     display: block;
+  }
+}
+
+@media (max-width: 575px) {
+  .gallery-modal .modal-dialog {
+    transform: translate(-52%, -50%) !important;
+  }
+}
+
+@media (max-width: 512px) {
+  .gallery-modal .modal-dialog {
+    transform: none !important;
+    position: relative;
+    top: 150px;
+    left: 2%;
+  }
+
+  .gallery-modal .modal-content {
+    width: auto;
+  }
+
+  .gallery-modal .carousel-control-prev {
+    margin-left: 0 !important;
+  }
+
+  .gallery-modal .carousel-control-next {
+    margin-right: 0 !important;
   }
 }
 
@@ -11736,8 +11817,6 @@ End of Modal
   }
 
   .parallax {
-    /* Set a specific height in each scss file*/
-    /* remove the parallax scrolling effect */
     background-attachment: inherit;
   }
 }
@@ -11778,6 +11857,16 @@ End of Modal
   .img-wrapper {
     width: 80% !important;
     margin: 5px auto !important;
+  }
+}
+
+@media (max-width: 360px) {
+  .opening-hours p {
+    margin-left: 0;
+  }
+
+  .opening-hours th {
+    width: auto;
   }
 }
 
