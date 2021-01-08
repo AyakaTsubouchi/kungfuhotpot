@@ -98,7 +98,7 @@ $('#exampleModal').on('shown.bs.modal', function () {
     var obj = $(this).val();
     obj = JSON.parse(obj);
  
-    $("#exampleModal .modal-body img").attr("src",obj.img);
+    $("#exampleModal .modal-body #modal-image").attr("src",obj.img);
     $("#exampleModal .modal-body #discription").text(obj.discription);
    
     // $("#exampleModal").modal();
