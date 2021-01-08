@@ -85,9 +85,38 @@ Modal
 End of Modal
 -------------------------------------*/
 
-$(document).ready(function() {
-  $( "img").on("click",function () {
+/*--------------------------------------
+End of Modal
+-------------------------------------*/
+$('#exampleModal').on('shown.bs.modal', function () {
+  $('#myInput').trigger('focus')
+})
 
-    console.log('Ok');
-});
-});
+
+
+  $('.get_button_more_info').on('click',function() {
+    var obj = $(this).val();
+    obj = JSON.parse(obj);
+ 
+    $("#exampleModal .modal-body img").attr("src",obj.img);
+    $("#exampleModal .modal-body #discription").text(obj.discription);
+   
+    // $("#exampleModal").modal();
+  });
+
+
+
+/*--------------------------------------
+End of Modal
+-------------------------------------*/
+  // $('#exampleModal').on('hidden.bs.modal', function () { 
+    // location.reload();
+// });
+
+
+// $(document).ready(function() {
+//   $( "img").on("click",function () {
+
+//     console.log('Ok');
+// });
+// });

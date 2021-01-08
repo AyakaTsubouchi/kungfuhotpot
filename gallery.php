@@ -19,33 +19,33 @@ Template name: Gallery
 
         <div class="photo-gallery" id="gallery" data-toggle="modal" data-target="#exampleModal">
 
-            <?php
+        <?php
             global $post;
 
             $gallery_post = get_posts(array(
                 'post_type' => 'gallery',
                 'posts_per_page' => 100,
 
+
             ));
-           
-           
+            
+
             if ($gallery_post) {
                 foreach ($gallery_post as $post) :
                     setup_postdata($post);
-                    // $obj = array(
-                    //     'content' => $post->post_content,
-                    //     'title' => esc_html(get_the_title()),
-                    //     'img' => get_the_post_thumbnail_url(),
-                    //     'targetNo' => the_excerpt(),
-                    // );
+                    $obj=array(
+                        'content' => $post->post_content,
+                        'title' => esc_html( get_the_title() ),
+                        'img' => get_the_post_thumbnail_url(),
+                        'discription'=> get_the_title(),
+                    );
+                    
 
             ?>
 
-                    <div class="square">
-                        <div class="img-wrapper">
-                            <img src="<?php echo get_the_post_thumbnail_url(); ?>" alt="First slide" data-id="<?php echo get_the_post_thumbnail_url(); ?>" data-target="#carouselExample" data-slide-to="<?php the_excerpt(); ?>">
-                        </div>
-                    </div>
+
+                    <button href="#" class="flex-box get_button_more_info square img-wrapper" data-toggle="modal" data-target="#exampleModal" value='<?= json_encode($obj) ?>'> <img src="<?php echo get_the_post_thumbnail_url(); ?>">
+                    </button>
 
 
             <?php
@@ -53,6 +53,7 @@ Template name: Gallery
                 wp_reset_postdata();
             }
             ?>
+
 
             <!-- <div class="square">
                 <div class="img-wrapper">
