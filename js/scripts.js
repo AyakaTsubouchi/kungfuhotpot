@@ -79,8 +79,6 @@ Modal
 //   }
 // });
 
-
-
 /*--------------------------------------
 End of Modal
 -------------------------------------*/
@@ -104,19 +102,17 @@ $('#exampleModal').on('shown.bs.modal', function () {
     // $("#exampleModal").modal();
   });
 
-
+  $('#exampleModal').on('hidden.bs.modal', function () { 
+  //   $(".carousel-item").html($(this).find('.active')).replace(" active","");
+  //  $("#exampleModal .modal-body #first-item").setAttribute("class","active")
+  
+  var firstItem = $(this).find(".carousel-item:first");
+  if ( !firstItem.hasClass("active") ) {
+    $(this).find(".active").removeClass("active");
+    firstItem.addClass("active");
+  }
+});
 
 /*--------------------------------------
 End of Modal
 -------------------------------------*/
-  // $('#exampleModal').on('hidden.bs.modal', function () { 
-    // location.reload();
-// });
-
-
-// $(document).ready(function() {
-//   $( "img").on("click",function () {
-
-//     console.log('Ok');
-// });
-// });

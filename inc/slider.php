@@ -52,18 +52,7 @@
             wp_reset_postdata();
         }
         ?>
-        <!--      
-        <div class="carousel-item active carousel_one" style=" background-image: url('http://www.kungfuhotpot.us/wp-content/uploads/2020/05/48.jpeg');">
-               
-        </div>
 
-        <div class="carousel-item" style="background-image: url('http://www.kungfuhotpot.us/wp-content/uploads/2020/05/13.jpeg');" >
-
-        </div>
-
-        <div class="carousel-item custom_item" style="background-image: url('http://www.kungfuhotpot.us/wp-content/uploads/2020/05/12.jpeg');">
-              
-        </div> -->
     </div>
     <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
         <span class="carousel-control-prev-icon" aria-hidden="true"></span>

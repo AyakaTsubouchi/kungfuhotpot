@@ -13,16 +13,12 @@
 
                         <div class="carousel-inner" role="listbox">
 
-                            <div class="carousel-item carousel_one active">
+                            <div id="first-item" class="carousel-item carousel_one active">
                                 <!-- the image url comes from gallery.php -->
                                 <img id="modal-image" alt="nice dishes">
                                 <p id="discription"></p>
 
                             </div>
-
-
-
-
 
                             <?php
                             global $post;
@@ -39,7 +35,7 @@
                                     setup_postdata($post);
 
                             ?>
-                                    <div class="carousel-item carousel_one my-modal-body">
+                                    <div class="carousel-item carousel_one">
                                         <img class="" src='<?php echo get_the_post_thumbnail_url(); ?>' alt="nice dishes">
                                         <p><?php echo get_the_title(); ?></p>
                                     </div>
@@ -61,9 +57,6 @@
                         <span class="sr-only">Next</span>
                     </a>
                 </div>
-                <!-- <div class="modal-footer">
-
-                    </div> -->
             </div>
         </div>
     </div>
