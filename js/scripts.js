@@ -79,15 +79,51 @@ Modal
 //   }
 // });
 
-
-
 /*--------------------------------------
 End of Modal
 -------------------------------------*/
 
-$(document).ready(function() {
-  $( "img").on("click",function () {
+/*--------------------------------------
+End of Modal
+-------------------------------------*/
+$('#exampleModal').on('shown.bs.modal', function () {
+  $('#myInput').trigger('focus')
+})
 
-    console.log('Ok');
+
+
+  $('.get_button_more_info').on('click',function() {
+    var obj = $(this).val();
+    obj = JSON.parse(obj);
+ 
+    $("#exampleModal .modal-body #modal-image").attr("src",obj.img);
+    $("#exampleModal .modal-body #discription").text(obj.discription);
+   
+   
+    // $("#exampleModal").modal();
+  });
+
+  //reset the "active" position when closing the modal.
+  $('#exampleModal').on('hidden.bs.modal', function () { 
+ 
+  var firstItem = $(this).find(".carousel-item:first");
+  if ( !firstItem.hasClass("active") ) {
+    $(this).find(".active").removeClass("active");
+    firstItem.addClass("active");
+  }
 });
+
+
+//TODO pending need some research how to pass the offset from js
+jQuery.ajax({
+  type: "POST",
+  url: <?=admin_url( 'admin-ajax.php' )?> ,
+  data: { "JS_var":  1997 /*  the value that you want to pass it to PHP variable */   }, 
+  success: function(data) {
+      alert("success!");
+  }
 });
+
+/*--------------------------------------
+End of Modal
+-------------------------------------*/
