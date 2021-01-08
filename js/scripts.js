@@ -99,17 +99,28 @@ $('#exampleModal').on('shown.bs.modal', function () {
     $("#exampleModal .modal-body #modal-image").attr("src",obj.img);
     $("#exampleModal .modal-body #discription").text(obj.discription);
    
+   
     // $("#exampleModal").modal();
   });
 
+  //reset the "active" position when closing the modal.
   $('#exampleModal').on('hidden.bs.modal', function () { 
-  //   $(".carousel-item").html($(this).find('.active')).replace(" active","");
-  //  $("#exampleModal .modal-body #first-item").setAttribute("class","active")
-  
+ 
   var firstItem = $(this).find(".carousel-item:first");
   if ( !firstItem.hasClass("active") ) {
     $(this).find(".active").removeClass("active");
     firstItem.addClass("active");
+  }
+});
+
+
+//TODO pending need some research how to pass the offset from js
+jQuery.ajax({
+  type: "POST",
+  url: <?=admin_url( 'admin-ajax.php' )?> ,
+  data: { "JS_var":  1997 /*  the value that you want to pass it to PHP variable */   }, 
+  success: function(data) {
+      alert("success!");
   }
 });
 

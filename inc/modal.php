@@ -1,3 +1,7 @@
+<script>
+
+    
+   </script>
 <section class="gallery-modal">
     <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog" role="document">
@@ -22,11 +26,11 @@
 
                             <?php
                             global $post;
-
+                            $offset = 2;
                             $gallery_post = get_posts(array(
                                 'post_type' => 'gallery',
                                 'posts_per_page' => 9,
-                                'offset' => 1
+                                'offset' => $offset
 
                             ));
 
@@ -38,6 +42,8 @@
                                     <div class="carousel-item carousel_one">
                                         <img class="" src='<?php echo get_the_post_thumbnail_url(); ?>' alt="nice dishes">
                                         <p><?php echo get_the_title(); ?></p>
+                                        <p><?php echo $offset; ?></p>
+                                     
                                     </div>
                             <?php
                                 endforeach;

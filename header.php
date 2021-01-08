@@ -8,14 +8,15 @@
    <meta name="description" content="">
    <meta name="keywords" content="HTML,CSS,JavaScript">
    <meta name="author" content="">
+
    <?php wp_head(); ?>
 </head>
 
-<body <?php body_class(); ?> >
+<body <?php body_class(); ?>>
    <div class="overflow">
       <header class="sticky header1 first-header">
          <div class="row">
- 
+
             <div class="col-md-3 col-sm-12">
                <div class="logo-wrapper">
                   <!-- TODO change the link -->
@@ -27,7 +28,7 @@
                   <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
                      <i class="fas fa-bars"></i>
                   </button>
- 
+
                   <?php
                   wp_nav_menu(array(
                      'theme_location'  => 'primary_menu',

@@ -307,3 +307,18 @@ load_theme_textdomain('themify', TEMPLATEPATH . '/languages');
 
 
 //slider shortcode
+
+
+
+// test //TODO pending
+   
+function wpmu_receive_var(){
+  $js_var = isset( $_REQUEST['JS_var'] )  ?  $_REQUEST['JS_var']  : 'the var didnt reach this function'; // 1997 value 
+
+ // do something with the variable or just echo it
+  echo $js_var;
+}
+// define the actions for the two hooks 
+// please note that it is obligatory to add your function name after <strong>wp_ajax_ & wp_ajax_nopriv</strong> .
+add_action("wp_ajax_wpmu_receive_var", "my_user_like");
+add_action("wp_ajax_nopriv_wpmu_receive_var", "please_login");
