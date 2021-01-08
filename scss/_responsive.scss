@@ -226,6 +226,15 @@
         width: 80% !important;
         margin: 5px auto !important;
     }
+    .modal-body{
+       
+        img{
+          
+          width: 150%;
+          object-fit: cover;
+        }
+      
+      }
 }
 @media (max-width: 360px) {
     .opening-hours {

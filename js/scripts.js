@@ -71,14 +71,23 @@ End of HOME
 Modal
 -----------------------------------------------------*/
 // disable the gallery modal on narrow screen
-$(document).ready(function() {
-  if ($(window).width() < 400) {
-    $("#gallery").removeAttr("data-target");
-  } else {
-    $("#gallery").setAttribute("data-target", "#exampleModal");
-  }
-});
+// $(document).ready(function() {
+//   if ($(window).width() < 400) {
+//     $("#gallery").removeAttr("data-target");
+//   } else {
+//     $("#gallery").setAttribute("data-target", "#exampleModal");
+//   }
+// });
+
+
 
 /*--------------------------------------
 End of Modal
 -------------------------------------*/
+
+$(document).ready(function() {
+  $( "img").on("click",function () {
+
+    console.log('Ok');
+});
+});

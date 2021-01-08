@@ -11268,7 +11268,6 @@ Modal
 
 .gallery-modal .modal-body .carousel-item {
   height: auto;
-  padding: 50px;
 }
 
 .gallery-modal .modal-body img {
@@ -11857,6 +11856,12 @@ End of Modal
   .img-wrapper {
     width: 80% !important;
     margin: 5px auto !important;
+  }
+
+  .modal-body img {
+    width: 150%;
+    -o-object-fit: cover;
+       object-fit: cover;
   }
 }
 

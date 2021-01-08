@@ -19,7 +19,42 @@ Template name: Gallery
 
         <div class="photo-gallery" id="gallery" data-toggle="modal" data-target="#exampleModal">
 
-            <div class="square">
+            <?php
+            global $post;
+
+            $gallery_post = get_posts(array(
+                'post_type' => 'gallery',
+                'posts_per_page' => 100,
+
+            ));
+           
+           
+            if ($gallery_post) {
+                foreach ($gallery_post as $post) :
+                    setup_postdata($post);
+                    // $obj = array(
+                    //     'content' => $post->post_content,
+                    //     'title' => esc_html(get_the_title()),
+                    //     'img' => get_the_post_thumbnail_url(),
+                    //     'targetNo' => the_excerpt(),
+                    // );
+
+            ?>
+
+                    <div class="square">
+                        <div class="img-wrapper">
+                            <img src="<?php echo get_the_post_thumbnail_url(); ?>" alt="First slide" data-id="<?php echo get_the_post_thumbnail_url(); ?>" data-target="#carouselExample" data-slide-to="<?php the_excerpt(); ?>">
+                        </div>
+                    </div>
+
+
+            <?php
+                endforeach;
+                wp_reset_postdata();
+            }
+            ?>
+
+            <!-- <div class="square">
                 <div class="img-wrapper">
                     <img src="http://www.kungfuhotpot.us/wp-content/uploads/photo-gallery/30.jpg" alt="First slide" data-target="#carouselExample" data-slide-to="0">
                 </div>
@@ -30,12 +65,12 @@ Template name: Gallery
                 </div>
             </div>
 
-            <!-- data-slike-to=2 doesn't work properly -->
-            <!-- <div class="square">
+            data-slike-to=2 doesn't work properly
+            <div class="square">
                 <div class="img-wrapper">
                     <img src="http://www.kungfuhotpot.us/wp-content/uploads/photo-gallery/33.png" alt="First slide" data-target="#carouselExample" data-slide-to="2">
                 </div>
-            </div> -->
+            </div>
 
             <div class="square">
                 <div class="img-wrapper">
@@ -86,7 +121,7 @@ Template name: Gallery
                 <div class="img-wrapper">
                     <img src="http://www.kungfuhotpot.us/wp-content/uploads/photo-gallery/37.png" alt="First slide" data-target="#carouselExample" data-slide-to="12">
                 </div>
-            </div>
+            </div> -->
 
         </div>
     </div>

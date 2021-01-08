@@ -11,58 +11,10 @@
                     <div id="carouselExample" class="carousel slide" data-ride="carousel">
 
                         <div class="carousel-inner">
-      
-                            <!-- data-slide-to 0 -->
-                            <div class="carousel-item my-modal-body active">
-                                <img src="http://www.kungfuhotpot.us/wp-content/uploads/photo-gallery/30.jpg" alt="First slide">
-                            </div>
-                            <!-- data-slide-to 1 -->
-                            <div class="carousel-item my-modal-body ">
-                                <img src="http://www.kungfuhotpot.us/wp-content/uploads/photo-gallery/32.png" alt="Second slide">
-                            </div>
-                            <!-- data-slide-to 2-->
-                            <div class="carousel-item my-modal-body ">
-                                <img src="http://www.kungfuhotpot.us/wp-content/uploads/photo-gallery/38.png" alt="Third slide">
-                            </div>
-                            <!-- data-slide-to 3 -->
-                            <div class="carousel-item my-modal-body ">
-                                <img src="http://www.kungfuhotpot.us/wp-content/uploads/photo-gallery/33.png" alt="Fourth slide">
-                            </div>
-                            <!-- data-slide-to 4 -->
-                            <div class="carousel-item my-modal-body ">
-                                <img src="http://www.kungfuhotpot.us/wp-content/uploads/photo-gallery/35.png" alt="Fourth slide">
-                            </div>
-                            <!-- data-slide-to 5 -->
-                            <div class="carousel-item my-modal-body ">
-                                <img src="http://www.kungfuhotpot.us/wp-content/uploads/photo-gallery/36.png" alt="Fourth slide">
-                            </div>
-                            <!-- data-slide-to 6 -->
-                            <div class="carousel-item my-modal-body ">
-                                <img src="http://www.kungfuhotpot.us/wp-content/uploads/photo-gallery/45.png" alt="Fourth slide">
-                            </div>
-                            <!-- data-slide-to 7 -->
-                            <div class="carousel-item my-modal-body ">
-                                <img src="http://www.kungfuhotpot.us/wp-content/uploads/photo-gallery/34.png" alt="Fourth slide">
-                            </div>
-                            <!-- data-slide-to 8 -->
-                            <div class="carousel-item my-modal-body ">
-                                <img src="http://www.kungfuhotpot.us/wp-content/uploads/photo-gallery/47.png" alt="Fourth slide">
-                            </div>
-                            <!-- data-slide-to 9 -->
-                            <div class="carousel-item my-modal-body ">
-                                <img src="http://www.kungfuhotpot.us/wp-content/uploads/photo-gallery/31.png" alt="Fourth slide">
-                            </div>
-                            <!-- data-slide-to 10 -->
-                            <div class="carousel-item my-modal-body ">
-                                <img src="http://www.kungfuhotpot.us/wp-content/uploads/photo-gallery/42.png" alt="Fourth slide">
-                            </div>
-                            <!-- data-slide-to 11 -->
-                            <div class="carousel-item my-modal-body ">
-                                <img src="http://www.kungfuhotpot.us/wp-content/uploads/photo-gallery/41.png" alt="Fourth slide">
-                            </div>
-                            <!-- data-slide-to 12 -->
-                            <div class="carousel-item my-modal-body ">
-                                <img src="http://www.kungfuhotpot.us/wp-content/uploads/photo-gallery/37.png" alt="Fourth slide">
+
+                          <!-- data-slide-to 0 -->
+                          <div class="carousel-item my-modal-body active">
+                                <img id="myImage" src="" alt="">
                             </div>
 
                         </div>
