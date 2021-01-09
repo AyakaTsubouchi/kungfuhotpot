@@ -251,6 +251,43 @@ add_action('init', 'gallery_post_type');
 
 /*Added gallery Post in Wordpress*/
 
+/*Added businessInfo Post in Wordpress*/
+function businessInfo_post_type()
+{
+
+  $businessInfo_labels = array(
+    'name' => __('businessInfo', 'kungfuhotpot_site'),
+    'singular_name' => __('Business Info', 'kungfuhotpot_site'),
+    'add_new' => __('Add new business Info', 'kungfuhotpot_site'),
+    'add_new_item' => __('Add new business info', 'kungfuhotpot_site'),
+    'featured_image' => __('Business info post image', 'kungfuhotpot_site'),
+    'set_featured_image' => __('Set business info image', 'kungfuhotpot_site'),
+
+  );
+
+  $businessInfo_args = array(
+
+    'labels' =>  $businessInfo_labels,
+    'public' => true,
+    'show_ui' => true,
+    'rewrite' => array('slug' => 'businessInfo'),
+    'capability_type' => 'post',
+    'menu_position' => null,
+    'supports' => array(
+      'title', 'editor', 'thumbnail', 'excerpt', 'author', 'permalinks',
+      'comments', 'revisions', 'custom-fields'
+    ),
+    'taxonomies'          => array('category', 'post_tag'),
+
+  );
+
+  register_post_type('businessInfo', $businessInfo_args);
+}
+
+add_action('init', 'businessInfo_post_type');
+
+/*Added businessInfo Post in Wordpress*/
+
 
 
 /*Added  header info in Wordpress*/

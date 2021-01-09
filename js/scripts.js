@@ -66,6 +66,23 @@ $(document).ready(function() {
 /*--------------------------------------
 End of HOME
 -------------------------------------*/
+/*--------------------------------------
+ Contact
+-------------------------------------*/
+// change iframe default width and height
+$(document).ready(function() {
+  $(window).on("load", function() {
+    $(".google-map iframe").removeAttr("width");
+    $(".google-map iframe").removeAttr("height");
+    $(".google-map iframe").attr("width","100%")
+    $(".google-map iframe").attr("height","100%")
+   
+  });
+});
+
+/*--------------------------------------
+End of Contact
+-------------------------------------*/
 
 /*--------------------------------------
 Modal
@@ -115,15 +132,24 @@ $('#exampleModal').on('shown.bs.modal', function () {
 
 
 //TODO pending need some research how to pass the offset from js
-jQuery.ajax({
-  type: "POST",
-  url: <?=admin_url( 'admin-ajax.php' )?> ,
-  data: { "JS_var":  1997 /*  the value that you want to pass it to PHP variable */   }, 
-  success: function(data) {
-      alert("success!");
-  }
-});
+// jQuery.ajax({
+//   type: "POST",
+//   url: <?=admin_url( 'admin-ajax.php' )?> ,
+//   data: { "JS_var":  1997 /*  the value that you want to pass it to PHP variable */   }, 
+//   success: function(data) {
+//       alert("success!");
+//   }
+// });
 
 /*--------------------------------------
 End of Modal
+-------------------------------------*/
+
+//TODO set googlemap's width and height 100%
+/*--------------------------------------
+Contact
+-------------------------------------*/
+
+/*--------------------------------------
+End of Contact
 -------------------------------------*/

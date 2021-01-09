@@ -11538,6 +11538,8 @@ End of Modal
 .contact-section .text-container .contact-card .opening-hours th,
 .contact-section .text-container .contact-card .opening-hours td {
   font-weight: 100;
+  font-family: "Montserrat", sans-serif;
+  font-size: 14px;
 }
 
 .contact-section .text-container .contact-card .opening-hours .time {
@@ -11609,7 +11611,6 @@ End of Modal
 
 .site-footer .business-hours table td {
   padding-left: 10px;
-  text-align: end;
 }
 
 .site-footer .copyright_txt {
