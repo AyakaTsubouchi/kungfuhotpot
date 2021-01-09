@@ -40,53 +40,39 @@ Template name: Home
 				?>
 			</div>
 			<div class="col-md-4 text-container">
+			<?php
+	global $post;
+
+	$businessInfo_post = get_posts(array(
+		'post_type' => 'businessInfo',
+		'posts_per_page' => 1,
+
+
+	));
+
+
+	if ($businessInfo_post) {
+		foreach ($businessInfo_post as $post) :
+			setup_postdata($post);
+
+	?>
 				<h3 class="title">Contact Us</h3>
 				<address class="contact-card">
 					<div class="name" itemprop="name">
-						KUNGFU BBQ 功夫火锅 </div>
+					<?php echo get_field("name", 533); ?></div>
 					<div class="address">
-						510 E. John St., Champaign IL 61820 </div>
+					<?php echo get_field("address", 533); ?></div>
 
 					<div class="directions">
-						<a href="//maps.google.com/maps?saddr=current+location&amp;daddr=510+E.+John+St.%2C++Champaign+IL+61820" target="_blank"><i class="fas fa-map-marker-alt"></i>Get directions</a>
+						<a href="<?php echo get_field("google_map_link", 533); ?>" target="_blank"><i class="fas fa-map-marker-alt"></i>Get directions</a>
 					</div>
 
 					<div class="phone">
-						<i class="fas fa-mobile-alt"></i>217-355-1888 </div>
+						<i class="fas fa-mobile-alt"></i><?php echo get_field("phone", 533); ?> </div>
 					<div class="opening-hours">
 						<p class="opening-hours-title"><i class="far fa-clock"></i>Opening Hours</p>
-						<table class="opening-hours">
-							<tbody>
-								<tr>
-									<th class="weekday-name weekday-monday">Monday</th>
-									<td class="time">11:00 am – 9:00 pm</td>
-								</tr>
-								<tr>
-									<th class="weekday-name weekday-monday">Tuesday</th>
-									<td class="time">11:00 am – 9:00 pm</td>
-								</tr>
-								<tr>
-									<th class="weekday-name weekday-monday">Wednesday</th>
-									<td class="time">11:00 am – 9:00 pm</td>
-								</tr>
-								<tr>
-									<th class="weekday-name weekday-monday">Thursday</th>
-									<td class="time">11:00 am – 9:00 pm</td>
-								</tr>
-								<tr>
-									<th class="weekday-name weekday-monday">Friday</th>
-									<td class="time">11:00 am – 9:00 pm</td>
-								</tr>
-								<tr>
-									<th class="weekday-name weekday-monday">Saturday</th>
-									<td class="time">11:00 am – 9:00 pm</td>
-								</tr>
-								<tr>
-									<th class="weekday-name weekday-monday">Sunday</th>
-									<td class="time">Closed</td>
-								</tr>
-							</tbody>
-						</table>
+						<?php echo do_shortcode('[mbhi_hours location="Vancouver"]'); ?>
+						
 					</div>
 
 				</address>
@@ -95,6 +81,12 @@ Template name: Home
 
 		</div>
 	</div>
+	
+	<?php
+		endforeach;
+		wp_reset_postdata();
+	}
+	?>
 	</div>
 </section>
 <a href="#">

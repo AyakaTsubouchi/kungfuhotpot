@@ -60,38 +60,7 @@ Template name: Contact
 							<div class="opening-hours">
 								<p class="opening-hours-title"><i class="far fa-clock"></i>Opening Hours</p>
 								<?php echo do_shortcode('[mbhi_hours location="Vancouver"]'); ?>
-								<!-- <table class="opening-hours">
-							<tbody>
-								<tr>
-									<th class="weekday-name weekday-monday">Monday</th>
-									<td class="time">11:00 am – 9:00 pm</td>
-								</tr>
-								<tr>
-									<th class="weekday-name weekday-monday">Tuesday</th>
-									<td class="time">11:00 am – 9:00 pm</td>
-								</tr>
-								<tr>
-									<th class="weekday-name weekday-monday">Wednesday</th>
-									<td class="time">11:00 am – 9:00 pm</td>
-								</tr>
-								<tr>
-									<th class="weekday-name weekday-monday">Thursday</th>
-									<td class="time">11:00 am – 9:00 pm</td>
-								</tr>
-								<tr>
-									<th class="weekday-name weekday-monday">Friday</th>
-									<td class="time">11:00 am – 9:00 pm</td>
-								</tr>
-								<tr>
-									<th class="weekday-name weekday-monday">Saturday</th>
-									<td class="time">11:00 am – 9:00 pm</td>
-								</tr>
-								<tr>
-									<th class="weekday-name weekday-monday">Sunday</th>
-									<td class="time">Closed</td>
-								</tr>
-							</tbody>
-						</table> -->
+								
 							</div>
 
 						</address>
