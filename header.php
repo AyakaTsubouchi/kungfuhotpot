@@ -20,7 +20,19 @@
             <div class="col-md-3 col-sm-12">
                <div class="logo-wrapper">
                   <!-- TODO change the link -->
-                  <a class="logo" href="http://localhost:8888/" style="background-image:url( 'http://www.kungfuhotpot.us/wp-content/uploads/2020/05/14.jpeg')"></a>
+
+                  <?php
+                  $custom_logo_id = get_theme_mod('custom_logo');
+                  $logo = wp_get_attachment_image_src($custom_logo_id, 'full');
+                  if (has_custom_logo()) {
+                     echo '<a class="logo" href="http://localhost:8888/" 
+        style="background-image:url( ' . esc_url($logo[0]) . ')"></a>';
+                  } else {
+                     echo '<h1>' . get_bloginfo('name') . '</h1>';
+                  }
+                  ?>
+                  <!-- <a class="logo" href="http://localhost:8888/" style="background-image:url( 'http://www.kungfuhotpot.us/wp-content/uploads/2020/05/14.jpeg')"></a> -->
+
                </div>
             </div>
             <div class="col-md-9 col-sm-12 no-padding-on-mobile">
@@ -28,7 +40,6 @@
                   <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
                      <i class="fas fa-bars"></i>
                   </button>
-
                   <?php
                   wp_nav_menu(array(
                      'theme_location'  => 'primary_menu',
