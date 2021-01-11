@@ -31,7 +31,6 @@
                      echo '<h1>' . get_bloginfo('name') . '</h1>';
                   }
                   ?>
-                  <!-- <a class="logo" href="http://localhost:8888/" style="background-image:url( 'http://www.kungfuhotpot.us/wp-content/uploads/2020/05/14.jpeg')"></a> -->
 
                </div>
             </div>

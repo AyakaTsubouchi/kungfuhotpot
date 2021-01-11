@@ -4,8 +4,14 @@ Template name: Contact
 */
 ?>
 <?php get_header(); ?>
+<?php
+if (have_posts()) :
+
+	while (have_posts()) : the_post();
+?>
+
 <section class="header-banner">
-	<div style="background-image:linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url(http://www.kungfuhotpot.us/wp-content/uploads/2020/05/22.jpg); background-size: cover;
+	<div style="background-image:linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url('<?php echo get_the_post_thumbnail_url(); ?>'); background-size: cover;
   background-repeat: no-repeat;
   background-position: center top;
   height: 300px;">
@@ -82,5 +88,13 @@ Template name: Contact
 		<i class="fa fa-angle-up"></i>
 	</div>
 </a>
+<?php
+	endwhile;
 
+else :
+	_e('Sorry, no posts matched your criteria.', 'textdomain');
+
+endif;
+
+?>
 <?php get_footer(); ?>
