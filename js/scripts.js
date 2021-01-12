@@ -108,8 +108,6 @@ $('#exampleModal').on('shown.bs.modal', function () {
   $('#myInput').trigger('focus')
 })
 
-
-
   $('.get_button_more_info').on('click',function() {
     var clickedItem = $(this).val();
     clickedItem = JSON.parse(clickedItem);
@@ -126,9 +124,11 @@ $('#exampleModal').on('shown.bs.modal', function () {
 if(myJSON){
 
   for(let i = 0; i < myJSON.length; i++){
-    $("#carouselExample").append(`
-    <div class='carousel-item carousel_one'>
+    $("#carouselExample .carousel-inner").append(`
+    <div class='carousel-item carousel_one closed-reset'>
       <img src=${myJSON[i].fimg_url} alt="nice dishes">
+      <p>${myJSON[i].title.rendered}</p>
+   
     </div>
     ` 
     );
@@ -138,38 +138,19 @@ if(myJSON){
 }
   });
 
-   
-    // $("#exampleModal").modal();
   });
-  // fetchPostData() {
-  //   fetch('http://localhost:8888/wp-json/wp/v2/gallery/'+ clickedItem.post_id)
-  //   .then(response => response.json())
-  //   .then(myJSON => {
-  //   // Logic goes here
-  //   console.log(myJSON);
-  // });
-  // }
 
   //reset the "active" position when closing the modal.
   $('#exampleModal').on('hidden.bs.modal', function () { 
  
   var firstItem = $(this).find(".carousel-item:first");
   if ( !firstItem.hasClass("active") ) {
-    $(this).find(".active").removeClass("active");
     firstItem.addClass("active");
   }
+  $('.closed-reset').remove();
+  
 });
 
-
-//TODO pending need some research how to pass the offset from js
-// jQuery.ajax({
-//   type: "POST",
-//   url: <?=admin_url( 'admin-ajax.php' )?> ,
-//   data: { "JS_var":  1997 /*  the value that you want to pass it to PHP variable */   }, 
-//   success: function(data) {
-//       alert("success!");
-//   }
-// });
 
 /*--------------------------------------
 End of Modal
@@ -183,56 +164,3 @@ Contact
 /*--------------------------------------
 End of Contact
 -------------------------------------*/
-$(function(){
-
-  /* 親のselectが変更されたら */
-  $("#parent-select-id").change(function(){
-
-      /* 子selectを表示させつつ */
-      $("#children-select").show("slow");
-      
-      /* 親selectの値を取得して、ajanx送受信用の関数に渡す */
-      parentArea = $(this).val();
-      runAjax(parentArea);
-
-  });
-
-});
-
-/* データの送受信用の関数 */
-function runAjax(parentArea) {
-    
-  /* wp_localize_scriptから受け取った
-     endpoint, secureと、
-     親タームのIDを送ってる */
-  $.post(
-      TOURSEARCH.endpoint, 
-      {
-  
-          action: TOURSEARCH.action,
-          parent_id: parentArea,
-          secure: TOURSEARCH.secure
-  
-      }, 
-      function(response){
-          
-          /* レスポンスを処理用の関数に渡す */
-          makeOptions(response);
-
-      }
-  );
-  
-}
-
-/* 受信したデータの処理とhtmlの書き換え */
-function makeOptions(response) {
-
-  $("#children-select").html("");
-  emptyoption = '<option value="">---</option>';
-  $("#children-select").append(emptyoption);
-  $(response).each(function(){
-      options = '<option value="' + this.id + '">' + this.name + '</option>';
-      $("#children-select").append(options);
-  });
-  
-}
