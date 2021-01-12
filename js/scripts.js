@@ -115,6 +115,7 @@ $('#exampleModal').on('shown.bs.modal', function () {
  
     $("#exampleModal .modal-body #modal-image").attr("src",obj.img);
     $("#exampleModal .modal-body #discription").text(obj.discription);
+    $("#exampleModal .modal-body #postid").text(obj.post_id);
    
    
     // $("#exampleModal").modal();

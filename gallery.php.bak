@@ -1,6 +1,6 @@
 <?php
 /*
-Template name: Gallery
+Template name: Gallery/bak
 */
 ?>
 <?php get_header(); ?>
@@ -24,13 +24,12 @@ if (have_posts()) :
 
         <div class="photo-gallery" id="gallery" data-toggle="modal" data-target="#exampleModal">
 
-        <?php
+        <!-- <?php
             global $post;
 
             $gallery_post = get_posts(array(
                 'post_type' => 'gallery',
                 'posts_per_page' => 100,
-             
 
 
             ));
@@ -44,13 +43,10 @@ if (have_posts()) :
                         'title' => esc_html( get_the_title() ),
                         'img' => get_the_post_thumbnail_url(),
                         'discription'=> get_the_title(),
-                        'post_id' => esc_html(get_the_ID()),
                     );
                     
 
             ?>
-
-
                     <button href="#" class="flex-box get_button_more_info square img-wrapper" data-toggle="modal" data-target="#exampleModal" value='<?= json_encode($obj) ?>'> <img src="<?php echo get_the_post_thumbnail_url(); ?>">
                     </button>
 
@@ -59,7 +55,10 @@ if (have_posts()) :
                 endforeach;
                 wp_reset_postdata();
             }
-            ?>
+            ?> -->
+            
+            <?php the_content(); ?>
+
 
         </div>
     </div>

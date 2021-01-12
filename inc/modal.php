@@ -21,6 +21,7 @@
                                 <!-- the image url comes from gallery.php -->
                                 <img id="modal-image" alt="nice dishes">
                                 <p id="discription"></p>
+                                <p id="postid"></p>
 
                             </div>
 
@@ -30,7 +31,8 @@
                             $gallery_post = get_posts(array(
                                 'post_type' => 'gallery',
                                 'posts_per_page' => 9,
-                                'offset' => $offset
+                                // 'offset' => $offset,
+                                'exclude' =>   $obj.post_id
 
                             ));
 
