@@ -103,6 +103,7 @@ End of Modal
 /*--------------------------------------
 End of Modal
 -------------------------------------*/
+
 $('#exampleModal').on('shown.bs.modal', function () {
   $('#myInput').trigger('focus')
 })
@@ -110,16 +111,44 @@ $('#exampleModal').on('shown.bs.modal', function () {
 
 
   $('.get_button_more_info').on('click',function() {
-    var obj = $(this).val();
-    obj = JSON.parse(obj);
+    var clickedItem = $(this).val();
+    clickedItem = JSON.parse(clickedItem);
  
-    $("#exampleModal .modal-body #modal-image").attr("src",obj.img);
-    $("#exampleModal .modal-body #discription").text(obj.discription);
-    $("#exampleModal .modal-body #postid").text(obj.post_id);
-   
+    $("#exampleModal .modal-body #modal-image").attr("src",clickedItem.img);
+    $("#exampleModal .modal-body #discription").text(clickedItem.discription);
+    $("#exampleModal .modal-body #postid").text(clickedItem.post_id);
+    
+    fetch('http://localhost:8888/wp-json/wp/v2/gallery?exclude='+ clickedItem.post_id )
+    .then(response => response.json())
+    .then(myJSON => {
+    // Logic goes here
+    console.log(myJSON);
+if(myJSON){
+
+  for(let i = 0; i < myJSON.length; i++){
+    $("#carouselExample").append(`
+    <div class='carousel-item carousel_one'>
+      <img src=${myJSON[i].fimg_url} alt="nice dishes">
+    </div>
+    ` 
+    );
+  console.log('img sorce',myJSON[i].fimg_url) 
+ 
+  }
+}
+  });
+
    
     // $("#exampleModal").modal();
   });
+  // fetchPostData() {
+  //   fetch('http://localhost:8888/wp-json/wp/v2/gallery/'+ clickedItem.post_id)
+  //   .then(response => response.json())
+  //   .then(myJSON => {
+  //   // Logic goes here
+  //   console.log(myJSON);
+  // });
+  // }
 
   //reset the "active" position when closing the modal.
   $('#exampleModal').on('hidden.bs.modal', function () { 
@@ -154,3 +183,56 @@ Contact
 /*--------------------------------------
 End of Contact
 -------------------------------------*/
+$(function(){
+
+  /* 親のselectが変更されたら */
+  $("#parent-select-id").change(function(){
+
+      /* 子selectを表示させつつ */
+      $("#children-select").show("slow");
+      
+      /* 親selectの値を取得して、ajanx送受信用の関数に渡す */
+      parentArea = $(this).val();
+      runAjax(parentArea);
+
+  });
+
+});
+
+/* データの送受信用の関数 */
+function runAjax(parentArea) {
+    
+  /* wp_localize_scriptから受け取った
+     endpoint, secureと、
+     親タームのIDを送ってる */
+  $.post(
+      TOURSEARCH.endpoint, 
+      {
+  
+          action: TOURSEARCH.action,
+          parent_id: parentArea,
+          secure: TOURSEARCH.secure
+  
+      }, 
+      function(response){
+          
+          /* レスポンスを処理用の関数に渡す */
+          makeOptions(response);
+
+      }
+  );
+  
+}
+
+/* 受信したデータの処理とhtmlの書き換え */
+function makeOptions(response) {
+
+  $("#children-select").html("");
+  emptyoption = '<option value="">---</option>';
+  $("#children-select").append(emptyoption);
+  $(response).each(function(){
+      options = '<option value="' + this.id + '">' + this.name + '</option>';
+      $("#children-select").append(options);
+  });
+  
+}

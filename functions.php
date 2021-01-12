@@ -213,6 +213,26 @@ add_action('init', 'blog_post_type');
 
 /*Added Blog Post in Wordpress*/
 
+// get post image url
+add_action('rest_api_init', 'register_rest_images' );
+function register_rest_images(){
+    register_rest_field( array('gallery'),
+        'fimg_url',
+        array(
+            'get_callback'    => 'get_rest_featured_image',
+            'update_callback' => null,
+            'schema'          => null,
+        )
+    );
+}
+function get_rest_featured_image( $object, $field_name, $request ) {
+    if( $object['featured_media'] ){
+        $img = wp_get_attachment_image_src( $object['featured_media'], 'href' );
+        return $img[0];
+    }
+    return false;
+}
+// end of get post image url
 
 /*Added gallery Post in Wordpress*/
 function gallery_post_type()
@@ -233,6 +253,7 @@ function gallery_post_type()
     'labels' =>  $gallery_labels,
     'public' => true,
     'show_ui' => true,
+      'show_in_rest' => true,
     'rewrite' => array('slug' => 'gallery'),
     'capability_type' => 'post',
     'menu_position' => null,
@@ -348,14 +369,46 @@ load_theme_textdomain('themify', TEMPLATEPATH . '/languages');
 
 
 // test //TODO pending
-   
-function wpmu_receive_var(){
-  $js_var = isset( $_REQUEST['JS_var'] )  ?  $_REQUEST['JS_var']  : 'the var didnt reach this function'; // 1997 value 
-
- // do something with the variable or just echo it
-  echo $js_var;
+add_action( 'wp_enqueue_scripts', '_child_search_script' );
+function _child_search_script(){
+    $path = get_template_directory_uri() . '/js/nskw-ajax.js';
+    wp_enqueue_script(  'child-search-onload', $path, array('jquery'), '', true );
+    wp_localize_script(
+        'child-search-onload',
+        'CHILDSEARCH', 
+        array(
+            'endpoint' => admin_url( 'admin-ajax.php' ),
+            'action'   => 'child_search',
+            'secure'   => wp_create_nonce( 'childsearch' )
+        )
+    );
 }
-// define the actions for the two hooks 
-// please note that it is obligatory to add your function name after <strong>wp_ajax_ & wp_ajax_nopriv</strong> .
-add_action("wp_ajax_wpmu_receive_var", "my_user_like");
-add_action("wp_ajax_nopriv_wpmu_receive_var", "please_login");
+// ajax、非同期通信で送信されてきたリクエストに返答する関数を登録する
+add_action( 'wp_ajax_child_search',        '_child_search');
+add_action( 'wp_ajax_nopriv_child_search', '_child_search');
+function _child_search(){
+
+    check_ajax_referer( 'toursearch', 'secure' );
+    
+    $parent_id = intval( $_POST['parent_id'] );
+
+    $args = array(
+        'child_of' => $parent_id, // ここに受け取った
+    );
+    $children_arr = get_terms( 'taxonomyname', $args );
+    $children = array();
+    foreach ( $children_arr as $c ) {
+
+        $children[] = array(
+            'id'   => esc_js( (int)$c->term_id ),
+            'name' => esc_js( $c->name )
+        );
+    }
+
+    // PHPの配列をJSONに変換して出力
+    header('Content-Type: application/json; charset=utf-8');
+    echo json_encode( $children );
+    die();
+    
+}
+

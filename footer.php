@@ -24,6 +24,11 @@
 
                      <a href="#" class="flex-box square"> <img src="<?php echo get_the_post_thumbnail_url(); ?>">
                      </a>
+                     <?php
+                 do_shortcode('sc_form_post');
+               
+               ?>
+
 
 
                <?php

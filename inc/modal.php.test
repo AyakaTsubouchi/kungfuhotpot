@@ -24,43 +24,43 @@
                                 <p id="postid"></p>
 
                             </div>
-                       
 
-                           <!-- <?php
+                            <?php
                             global $post;
+                            global $obj;
                 
                             $offset = 2;
                            
-                            $gallery_post = get_posts(array(
-                                'post_type' => 'gallery',
-                                'posts_per_page' => 9,
-                                // 'offset' => $offset,
-                                // 'exclude' =>   array($obj.post_id),
-                                'exclude' => $obj['post_id'],
+                            // $gallery_post = get_posts(array(
+                            //     'post_type' => 'gallery',
+                            //     'posts_per_page' => 9,
+                            //     // 'offset' => $offset,
+                            //     // 'exclude' =>   array($obj.post_id),
+                            //     'exclude' => $obj['post_id'],
 
-                            ));
+                            // ));
 
-                            if ($gallery_post) {
-                                foreach ($gallery_post as $post) :
-                                    setup_postdata($post);
+                            // if ($gallery_post) {
+                            //     foreach ($gallery_post as $post) :
+                            //         setup_postdata($post);
+                            if ($obj) {
+                                    foreach ($obj as $post) :
+                                        // setup_postdata($post);
 
                             ?>
                                     <div class="carousel-item carousel_one">
-                                        <img class="" src='<?php echo get_the_post_thumbnail_url(); ?>' alt="nice dishes">
-                                        
-                                        <p><?php echo get_the_title(); ?></p>
+                                        <img class="" src='<?php echo $obj['img']; ?>' alt="nice dishes">
+                                        <p><?php echo $obj['discription']; ?></p>
                                         <p><?php echo $obj['post_id']; ?></p>
                                      
-                                  
+                                        <p><?php echo $selected; ?>se</p>
                                      
                                     </div>
                             <?php
                                 endforeach;
-                                wp_reset_postdata();
+                                // wp_reset_postdata();
                             }
-                            ?>  -->
-                            
-                            
+                            ?>
                         </div>
 
 
