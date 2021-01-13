@@ -35,7 +35,7 @@ if (have_posts()) :
 
             ));
             
-
+            global $obj;
             if ($gallery_post) {
                 foreach ($gallery_post as $post) :
                     setup_postdata($post);
@@ -45,13 +45,10 @@ if (have_posts()) :
                         'img' => get_the_post_thumbnail_url(),
                         'discription'=> get_the_title(),
                         'post_id' => esc_html(get_the_ID()),
-                    );
-                    
-
+                    );                   
             ?>
 
-
-                    <button href="#" class="flex-box get_button_more_info square img-wrapper" data-toggle="modal" data-target="#exampleModal" value='<?= json_encode($obj) ?>'> <img src="<?php echo get_the_post_thumbnail_url(); ?>">
+                    <button href="#" class="flex-box get_button_more_info square img-wrapper" data-toggle="modal" data-target="#exampleModal" value='<?= json_encode($obj) ?>'><img src="<?php echo get_the_post_thumbnail_url(); ?>">
                     </button>
 
 
