@@ -11258,14 +11258,6 @@ Modal
   margin: 0 auto;
 }
 
-.gallery-modal .modal-body .carousel-control-next {
-  margin-right: -35px;
-}
-
-.gallery-modal .modal-body .carousel-control-prev {
-  margin-left: -35px;
-}
-
 .gallery-modal .modal-body .carousel-item {
   height: auto;
 }

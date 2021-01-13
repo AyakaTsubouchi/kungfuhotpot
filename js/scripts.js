@@ -56,10 +56,9 @@ $(document).ready(function() {
 // slideIn animation
 $(document).ready(function() {
   $(window).on("load", function() {
-    setTimeout( function(){
+    setTimeout(function() {
       $(".text-slider").addClass("slide-in");
-    },1000)
-   
+    }, 1000);
   });
 });
 
@@ -74,9 +73,8 @@ $(document).ready(function() {
   $(window).on("load", function() {
     $(".google-map iframe").removeAttr("width");
     $(".google-map iframe").removeAttr("height");
-    $(".google-map iframe").attr("width","100%")
-    $(".google-map iframe").attr("height","100%")
-   
+    $(".google-map iframe").attr("width", "100%");
+    $(".google-map iframe").attr("height", "100%");
   });
 });
 
@@ -96,71 +94,47 @@ Modal
 //   }
 // });
 
-/*--------------------------------------
-End of Modal
--------------------------------------*/
+$("#exampleModal").on("shown.bs.modal", function() {
+  $("#myInput").trigger("focus");
+});
 
-/*--------------------------------------
-End of Modal
--------------------------------------*/
+$(".get_button_more_info").on("click", function() {
+  var clickedItem = $(this).val();
+  clickedItem = JSON.parse(clickedItem);
 
-$('#exampleModal').on('shown.bs.modal', function () {
-  $('#myInput').trigger('focus')
-})
+  $("#exampleModal .modal-body #modal-image").attr("src", clickedItem.img);
+  $("#exampleModal .modal-body #discription").text(clickedItem.discription);
+  $("#exampleModal .modal-body #postid").text(clickedItem.post_id);
 
-  $('.get_button_more_info').on('click',function() {
-    var clickedItem = $(this).val();
-    clickedItem = JSON.parse(clickedItem);
- 
-    $("#exampleModal .modal-body #modal-image").attr("src",clickedItem.img);
-    $("#exampleModal .modal-body #discription").text(clickedItem.discription);
-    $("#exampleModal .modal-body #postid").text(clickedItem.post_id);
-    
-    fetch('http://localhost:8888/wp-json/wp/v2/gallery?exclude='+ clickedItem.post_id )
-    .then(response => response.json())
-    .then(myJSON => {
-    // Logic goes here
-    console.log(myJSON);
-if(myJSON){
-
-  for(let i = 0; i < myJSON.length; i++){
-    $("#carouselExample .carousel-inner").append(`
+  //TODO when it's deployed, change the endpoint
+  const endpoint = "http://localhost:8888/wp-json/wp/v2/gallery?exclude=";
+  fetch(endpoint + clickedItem.post_id)
+    .then((response) => response.json())
+    .then((myJSON) => {
+      if (myJSON) {
+        for (let i = 0; i < myJSON.length; i++) {
+          $("#carouselExample .carousel-inner").append(`
     <div class='carousel-item carousel_one closed-reset'>
       <img src=${myJSON[i].fimg_url} alt="nice dishes">
       <p>${myJSON[i].title.rendered}</p>
    
     </div>
-    ` 
-    );
-  console.log('img sorce',myJSON[i].fimg_url) 
- 
-  }
-}
-  });
-
-  });
-
-  //reset the "active" position when closing the modal.
-  $('#exampleModal').on('hidden.bs.modal', function () { 
- 
-  var firstItem = $(this).find(".carousel-item:first");
-  if ( !firstItem.hasClass("active") ) {
-    firstItem.addClass("active");
-  }
-  $('.closed-reset').remove();
-  
+    `);
+        }
+      }
+    });
 });
 
+//reset the "active" position when closing the modal.
+$("#exampleModal").on("hidden.bs.modal", function() {
+  var firstItem = $(this).find(".carousel-item:first");
+  if (!firstItem.hasClass("active")) {
+    firstItem.addClass("active");
+  }
+  $(".closed-reset").remove();
+});
 
 /*--------------------------------------
 End of Modal
 -------------------------------------*/
 
-//TODO set googlemap's width and height 100%
-/*--------------------------------------
-Contact
--------------------------------------*/
-
-/*--------------------------------------
-End of Contact
--------------------------------------*/

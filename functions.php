@@ -7,23 +7,8 @@ function load_stylesheets()
   wp_register_style('bootstrap', get_template_directory_uri() . '/css/bootstrap.min.css', array(), false, 'all');
   wp_enqueue_style('bootstrap');
 
-  wp_register_style('bootstrap_grid', get_template_directory_uri() . '/css/bootstrap-grid.min.css', array(), false, 'all');
-  wp_enqueue_style('bootstrap_grid');
-
-  wp_register_style('bootstrap_reboot', get_template_directory_uri() . '/css/bootstrap-reboot.min.css', array(), false, 'all');
-  wp_enqueue_style('bootstrap_reboot');
-
-  wp_register_style('niceselect', get_template_directory_uri() . '/css/nice-select.css', array(), false, 'all');
-  wp_enqueue_style('niceselect');
-
-
-
   wp_register_style('custom', get_template_directory_uri() . '/css/app.css', '', 1, 'all');
   wp_enqueue_style('custom');
-  
-  
-  wp_register_style('style', get_template_directory_uri() . '/css/style.css', array(), false, 'all');
-  wp_enqueue_style('style');
 
   wp_register_style('fontawsome', get_template_directory_uri() . '/css/fontawesome.min.css', array(), false, 'all');
   wp_enqueue_style('fontawsome');
@@ -37,14 +22,6 @@ function include_jquery()
   wp_register_script('jquery', get_template_directory_uri() . '/js/jquery-3.5.1.js', '', 1, true);
   wp_enqueue_script('jquery');
 
-
-  wp_deregister_script('magnificpopup');
-  wp_register_script('magnificpopup', get_template_directory_uri() . '/js/jquery.magnific-popup.min.js', '', 1, true);
-  wp_enqueue_script('magnificpopup');
-
-  wp_deregister_script('mCustomScrollbar');
-  wp_register_script('mCustomScrollbar', get_template_directory_uri() . '/js/jquery.mCustomScrollbar.concat.min.js', '', 1, true);
-  wp_enqueue_script('mCustomScrollbar');
 }
 add_action('wp_enqueue_scripts', 'include_jquery');
 
@@ -214,23 +191,26 @@ add_action('init', 'blog_post_type');
 /*Added Blog Post in Wordpress*/
 
 // get post image url
-add_action('rest_api_init', 'register_rest_images' );
-function register_rest_images(){
-    register_rest_field( array('gallery'),
-        'fimg_url',
-        array(
-            'get_callback'    => 'get_rest_featured_image',
-            'update_callback' => null,
-            'schema'          => null,
-        )
-    );
+add_action('rest_api_init', 'register_rest_images');
+function register_rest_images()
+{
+  register_rest_field(
+    array('gallery'),
+    'fimg_url',
+    array(
+      'get_callback'    => 'get_rest_featured_image',
+      'update_callback' => null,
+      'schema'          => null,
+    )
+  );
 }
-function get_rest_featured_image( $object, $field_name, $request ) {
-    if( $object['featured_media'] ){
-        $img = wp_get_attachment_image_src( $object['featured_media'], 'href' );
-        return $img[0];
-    }
-    return false;
+function get_rest_featured_image($object, $field_name, $request)
+{
+  if ($object['featured_media']) {
+    $img = wp_get_attachment_image_src($object['featured_media'], 'href');
+    return $img[0];
+  }
+  return false;
 }
 // end of get post image url
 
@@ -253,7 +233,7 @@ function gallery_post_type()
     'labels' =>  $gallery_labels,
     'public' => true,
     'show_ui' => true,
-      'show_in_rest' => true,
+    'show_in_rest' => true,
     'rewrite' => array('slug' => 'gallery'),
     'capability_type' => 'post',
     'menu_position' => null,
@@ -362,53 +342,3 @@ add_filter('excerpt_more', 'new_excerpt_more');
 
 //for easy appointment translate(loco translate)
 load_theme_textdomain('themify', TEMPLATEPATH . '/languages');
-
-
-//slider shortcode
-
-
-
-// test //TODO pending
-add_action( 'wp_enqueue_scripts', '_child_search_script' );
-function _child_search_script(){
-    $path = get_template_directory_uri() . '/js/nskw-ajax.js';
-    wp_enqueue_script(  'child-search-onload', $path, array('jquery'), '', true );
-    wp_localize_script(
-        'child-search-onload',
-        'CHILDSEARCH', 
-        array(
-            'endpoint' => admin_url( 'admin-ajax.php' ),
-            'action'   => 'child_search',
-            'secure'   => wp_create_nonce( 'childsearch' )
-        )
-    );
-}
-// ajax、非同期通信で送信されてきたリクエストに返答する関数を登録する
-add_action( 'wp_ajax_child_search',        '_child_search');
-add_action( 'wp_ajax_nopriv_child_search', '_child_search');
-function _child_search(){
-
-    check_ajax_referer( 'toursearch', 'secure' );
-    
-    $parent_id = intval( $_POST['parent_id'] );
-
-    $args = array(
-        'child_of' => $parent_id, // ここに受け取った
-    );
-    $children_arr = get_terms( 'taxonomyname', $args );
-    $children = array();
-    foreach ( $children_arr as $c ) {
-
-        $children[] = array(
-            'id'   => esc_js( (int)$c->term_id ),
-            'name' => esc_js( $c->name )
-        );
-    }
-
-    // PHPの配列をJSONに変換して出力
-    header('Content-Type: application/json; charset=utf-8');
-    echo json_encode( $children );
-    die();
-    
-}
-

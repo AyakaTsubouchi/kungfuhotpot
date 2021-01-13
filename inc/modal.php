@@ -1,7 +1,7 @@
 <script>
 
-    
-   </script>
+
+</script>
 <section class="gallery-modal">
     <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog" role="document">
@@ -18,15 +18,11 @@
                         <div class="carousel-inner" role="listbox">
 
                             <div id="first-item" class="carousel-item carousel_one active">
-                            <!-- the data come from script.js -->
+                                <!-- the data come from script.js -->
                                 <img id="modal-image" alt="nice dishes">
                                 <p id="discription"></p>
                             </div>
-                     
-                            
                         </div>
-
-
                     </div>
                     <a class="carousel-control-prev" href="#carouselExample" role="button" data-slide="prev">
                         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
